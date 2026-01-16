@@ -1,0 +1,1277 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.main-header{
+    position: sticky;        /* stays on scroll */
+    top: 0;
+    background: #ffffff;
+    padding: 15px 40px;
+    z-index: 9999;           /* always above hero */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo-area{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-area img{
+    height: 60px;
+}
+
+/* ================= NAV MENU ================= */
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.nav-menu li{
+    position: relative;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* DONATE BUTTON */
+.donate-btn{
+    background: #fdb515;
+    padding: 8px 18px;
+    border-radius: 6px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* ================= DROPDOWN ================= */
+
+.dropdown-menu{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 220px;
+    list-style: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    display: none;
+    z-index: 10000;
+}
+
+.dropdown-menu li a{
+    display: block;
+    padding: 12px 16px;
+    color: #000;
+}
+
+.dropdown-menu li a:hover{
+    background: #f2f2f2;
+}
+
+/* SHOW DROPDOWN */
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+/* ================= HERO SECTION ================= */
+
+.hero-section{
+    background: url("../img/NGO.jpg") center / cover no-repeat;
+    height: 85vh;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+/* OVERLAY */
+.hero-overlay{
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, #003366 20%, transparent);
+    z-index: 1;
+}
+
+/* CONTENT */
+.hero-content{
+    position: relative;
+    padding: 50px;
+    max-width: 900px;
+    z-index: 2;
+}
+
+.hero-content h1{
+    color: #fff;
+    font-size: 52px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+/* ================= FOOTER ================= */
+/* ================= FOOTER ================= */
+
+footer{
+    background: #003366;  /* Dark Blue from Logo */
+    padding: 60px 40px 30px;
+    color: #ffffff;       /* White text for contrast */
+}
+
+/* FOOTER GRID */
+.footer-top{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* FOOTER COLUMNS */
+.footer-col h4{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #ffffff;       /* Heading changed to White */
+}
+
+.footer-col p{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #dbe4ef;       /* Light blue-grey for softer text */
+}
+
+/* FOOTER LOGO (New Addition) */
+.footer-logo {
+    width: 180px;        /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 15px; /* Space between logo and text */
+    display: block;
+    background: #ffffff; /* White background box */
+    padding: 10px;       /* Spacing inside the white box */
+    border-radius: 8px;  /* Rounded corners */
+}
+
+/* FOOTER LINKS */
+.footer-col a{
+    display: block;
+    text-decoration: none;
+    color: #dbe4ef;       /* Light blue-grey links */
+    font-size: 14px;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.footer-col a:hover{
+    color: #5ab9ea;       /* Cyan/Light Blue from Logo dots on hover */
+    padding-left: 6px;
+}
+
+/* CONTACT BUTTON */
+.contact-btn{
+    background: #ffffff;  /* White button */
+    color: #003366;       /* Dark Blue text */
+    padding: 12px 26px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.contact-btn:hover{
+    background: #5ab9ea;  /* Light Blue from logo dots */
+    color: #ffffff;
+}
+
+/* SOCIAL ICONS */
+.footer-social{
+    text-align: center;
+    padding: 25px 0;
+}
+
+.icons a{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 2px solid rgba(255,255,255,0.2); /* Semi-transparent white border */
+    color: #ffffff;
+    border-radius: 50%;
+    margin: 6px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 16px;      /* Ensures icons are visible size */
+}
+
+.icons a:hover{
+    background: #5ab9ea;  /* Light Blue from logo dots */
+    border-color: #5ab9ea;
+    color: #fff;
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+/* FOOTER BOTTOM */
+.footer-bottom{
+    text-align: center;
+    font-size: 14px;
+    color: #aabbcd;       /* Muted blue-grey */
+    border-top: 1px solid rgba(255,255,255,0.1); /* Subtle divider */
+    padding-top: 20px;
+}
+
+/* RESPONSIVE */
+@media(max-width: 768px){
+    footer{
+        padding: 50px 25px 25px;
+    }
+
+    .footer-top{
+        gap: 30px;
+    }
+}
+/* ================= FOCUS AREAS ================= */
+
+.focus-section{
+    padding:90px 20px;
+    background:linear-gradient(to bottom,#f8fbff,#ffffff);
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    font-weight:700;
+    color:#003366;
+    margin-bottom:10px;
+}
+
+.section-subtitle{
+    text-align:center;
+    max-width:650px;
+    margin:0 auto 60px;
+    font-size:18px;
+    color:#555;
+}
+
+.focus-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.focus-card{
+    background:#fff;
+    padding:40px 30px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
+    transition:all 0.4s ease;
+    position:relative;
+    overflow:hidden;
+}
+
+.focus-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(135deg,#003366,#0066cc);
+    opacity:0;
+    transition:0.4s;
+}
+
+.focus-card:hover::before{
+    opacity:1;
+}
+
+.focus-card *{
+    position:relative;
+    z-index:1;
+}
+
+.focus-card:hover{
+    transform:translateY(-12px);
+}
+
+.focus-icon{
+    font-size:48px;
+    background:#eef5ff;
+    width:90px;
+    height:90px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+    border-radius:50%;
+    transition:0.4s;
+}
+
+.focus-card:hover .focus-icon{
+    background:#fff;
+}
+
+.focus-card h3{
+    font-size:22px;
+    margin-bottom:15px;
+    color:#003366;
+    transition:0.4s;
+}
+
+.focus-card p{
+    font-size:16px;
+    line-height:1.6;
+    color:#555;
+    margin-bottom:25px;
+    transition:0.4s;
+}
+
+/* Read More Button */
+.focus-btn{
+    display:inline-block;
+    padding:12px 26px;
+    background:#003366;
+    color:#fff;
+    border-radius:30px;
+    font-size:15px;
+    font-weight:600;
+    text-decoration:none;
+    transition:all 0.4s ease;
+}
+
+.focus-card:hover .focus-btn{
+    background:#ffffff;
+    color:#003366;
+}
+
+.focus-card:hover h3,
+.focus-card:hover p{
+    color:#ffffff;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .section-title{
+        font-size:32px;
+    }
+}
+/* ================= IMPACT SECTION ================= */
+.impact-section {
+    position: relative;
+    padding: 80px 20px;
+    background: url("../img/impact-bg.jpg") center/cover fixed no-repeat; /* Optional: Add a bg image or remove for solid color */
+    background-color: #003366; /* Fallback color */
+    color: #fff;
+    text-align: center;
+}
+
+/* Dark overlay to make numbers readable if you use an image */
+.impact-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 51, 102, 0.85); 
+}
+
+.impact-content {
+    position: relative;
+    z-index: 2;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.impact-item {
+    padding: 20px;
+}
+
+.impact-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #fdb515; /* Your yellow accent color */
+    margin-bottom: 10px;
+}
+
+.impact-item p {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* ================= CTA SECTION ================= */
+.cta-section {
+    padding: 80px 20px;
+    background: #f9fafc;
+    border-top: 1px solid #eee;
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.cta-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.cta-text h2 {
+    font-size: 32px;
+    color: #003366;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.cta-text p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-filled {
+    background: #003366;
+    color: #fff;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid #003366;
+}
+
+.btn-filled:hover {
+    background: #002244;
+    border-color: #002244;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #003366;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid #003366;
+}
+
+.btn-outline:hover {
+    background: #003366;
+    color: #fff;
+}
+
+/* Responsive CTA */
+@media (max-width: 768px) {
+    .cta-container {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .cta-buttons {
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+    }
+    
+    .btn-filled, .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+}
+/* ================= VISION & MISSION SECTION ================= */
+.vision-mission-section {
+    padding: 80px 20px;
+    background: #fff; /* or #f9fafc for slight contrast */
+}
+
+.vm-container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* LEFT COLUMN: IMAGE */
+.vm-image-col {
+    flex: 1;
+    min-width: 300px;
+}
+
+.vm-img-wrapper {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.vm-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Play Icon (Optional stylistic touch from screenshot) */
+.play-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fdb515; /* Your theme yellow */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* RIGHT COLUMN: CARDS */
+.vm-content-col {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vm-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Soft shadow */
+    border: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* The Checkmark Icon */
+.vm-icon {
+    background: #eafbf0; /* Light green bg */
+    color: #28a745;      /* Green check color */
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vm-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 700;
+}
+
+.vm-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* Button Wrapper */
+.vm-btn-wrapper {
+    margin-top: 10px;
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+    .vm-container {
+        flex-direction: column;
+    }
+    
+    .vm-image-col, .vm-content-col {
+        width: 100%;
+    }
+}
+/* ================= VISION & MISSION SECTION ================= */
+.vision-mission-section {
+    padding: 80px 20px;
+    background: #fff; /* or #f9fafc for slight contrast */
+}
+
+.vm-container {
+    display: flex;
+    align-items: center; /* Vertically center content */
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* LEFT COLUMN: IMAGE */
+.vm-image-col {
+    flex: 1;
+    min-width: 650px;
+}
+
+.vm-img-wrapper {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.vm-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+/* Play Icon (Optional stylistic touch from screenshot) */
+.play-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background: #fdb515; /* Your theme yellow */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* RIGHT COLUMN: CARDS */
+.vm-content-col {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.vm-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Soft shadow */
+    border: 1px solid #eee;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    transition: transform 0.3s ease;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* The Checkmark Icon */
+.vm-icon {
+    background: #eafbf0; /* Light green bg */
+    color: #28a745;      /* Green check color */
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.vm-text h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 700;
+}
+
+.vm-text p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+    margin: 0;
+}
+
+/* Small Read More Button Styling */
+.vm-btn-small {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #003366;      /* Blue text */
+    text-decoration: none;
+    border-bottom: 2px solid #fdb515; /* Yellow underline */
+    transition: all 0.3s ease;
+}
+
+.vm-btn-small:hover {
+    color: #fdb515;      /* Text turns yellow on hover */
+    border-bottom-color: #003366; /* Underline turns blue */
+    padding-left: 5px;   /* Slight movement effect */
+}
+
+/* Responsive adjustment */
+@media (max-width: 900px) {
+    .vm-container {
+        flex-direction: column;
+    }
+    
+    .vm-image-col, .vm-content-col {
+        width: 100%;
+    }
+}
+/* ================= CLINICAL SECTION ================= */
+.clinical-section {
+    padding: 90px 20px;
+    background-color: #f4f7fa; /* Very light grey-blue background */
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px;
+}
+
+.section-header h2 {
+    font-size: 36px;
+    color: #003366;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Decorative underline for title */
+.section-header h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #fdb515; /* Yellow accent */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.section-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* GRID LAYOUT */
+.clinical-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* CARD STYLE */
+.clinical-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.05); /* Subtle blue shadow */
+    border-bottom: 4px solid transparent; /* Hidden bottom border for hover effect */
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* HOVER ANIMATION: LIFT & BORDER */
+.clinical-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.12);
+    border-bottom-color: #fdb515; /* Yellow line appears on hover */
+}
+
+/* ICON STYLING */
+.icon-box {
+    width: 80px;
+    height: 80px;
+    background: #eef5ff;
+    color: #003366;
+    font-size: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    transition: all 0.4s ease;
+}
+
+/* HOVER ANIMATION: ICON */
+.clinical-card:hover .icon-box {
+    background: #003366;
+    color: #ffffff;
+    transform: rotateY(180deg); /* Cool flip effect */
+}
+
+.clinical-card h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.clinical-card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.small-text {
+    font-size: 14px; /* Slightly smaller text for the long list in card 4 */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .section-header h2 {
+        font-size: 28px;
+    }
+}
+/* ================= OUR VISION ================= */
+/* ================= PAGE HERO (Small Hero) ================= */
+.page-hero {
+    position: relative;
+    height: 60vh; 
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* FLEXBOX ALIGNMENT */
+    display: flex;
+    align-items: center;         /* Centers text vertically (up/down) */
+    justify-content: flex-start; /* FORCE LEFT ALIGNMENT (horizontally) */
+}
+
+/* Gradient Overlay (Dark on left, transparent on right) */
+.hero-gradient {
+    position: absolute;
+    inset: 0;
+    /* This creates the dark shadow specifically on the left side */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.5) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.hero-content-small {
+    position: relative;
+    z-index: 2; 
+    color: #fff;
+    width: 100%;       /* Full width of container */
+    text-align: left;  /* FORCE TEXT TO LEFT */
+    padding-left: 20px; /* Slight buffer from the very edge if container is full width */
+}
+
+.hero-content-small h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    max-width: 650px; /* Restricts width so it stays on the left side */
+}
+
+.hero-content-small p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 600px; /* Restricts width so it stays on the left side */
+    opacity: 0.9;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .page-hero {
+        height: 50vh;
+        background-position: center right; 
+    }
+
+    .hero-gradient {
+        background: rgba(0, 0, 0, 0.7); /* Darken whole image on mobile */
+    }
+
+    .hero-content-small h1 {
+        font-size: 32px;
+    }
+
+    .hero-content-small p {
+        font-size: 16px;
+    }
+}
+/* ================= DREAM & GOALS SECTIONS ================= */
+
+/* SHARED SETTINGS */
+.dream-section, .goals-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.section-heading-red {
+    font-size: 36px;
+    font-weight: 800;
+    color: #cf4520; /* Burnt orange/red from image */
+    margin-bottom: 25px;
+}
+
+.section-heading-blue {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003366; /* Dark blue theme */
+    margin-bottom: 20px;
+}
+
+/* --- DREAM SECTION LAYOUT --- */
+.dream-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.dream-content {
+    flex: 1; /* Takes up left half */
+}
+
+.dream-intro {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+/* Nested Grid for Mission/Vision */
+.mission-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 30px;
+}
+
+.mv-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #008080; /* Teal green from image */
+    margin-bottom: 15px;
+}
+
+.mv-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.dream-image {
+    flex: 0 0 450px; /* Fixed width for image column */
+}
+
+.dream-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* --- GOALS SECTION LAYOUT --- */
+.goals-container {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+}
+
+.goals-image {
+    flex: 1;
+}
+
+.goals-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.goals-content {
+    flex: 1;
+}
+
+.goals-intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+/* CHECKLIST STYLING */
+.goals-list {
+    list-style: none;
+    padding: 0;
+}
+
+.goals-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.goals-list i {
+    color: #008080; /* Teal checkmark */
+    font-size: 18px;
+    margin-top: 4px; /* Aligns icon with top line of text */
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .dream-container, .goals-container {
+        flex-direction: column;
+    }
+
+    .dream-image, .goals-image {
+        width: 100%;
+        flex: none;
+    }
+
+    .mission-vision-grid {
+        grid-template-columns: 1fr; /* Stack mission/vision on mobile */
+    }
+}
+/* ================= DONATION & ACTIVITIES ================= */
+
+.donation-section, .activities-section {
+    padding: 80px 20px;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0; /* Subtle separator line */
+}
+
+/* REUSABLE FLEX CONTAINER */
+.split-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.split-content {
+    flex: 1;
+}
+
+.split-image {
+    flex: 1;
+}
+
+.split-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* RED BUTTON STYLE */
+.btn-red-pill {
+    display: inline-block;
+    background-color: #cf4520; /* Burnt Orange/Red from image */
+    color: #fff;
+    padding: 12px 35px;
+    border-radius: 50px; /* Pill shape */
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.btn-red-pill:hover {
+    background-color: #a03010; /* Darker red on hover */
+}
+
+/* ACTIVITY LIST STYLE */
+.activity-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.activity-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 15px;
+}
+
+.activity-list i {
+    color: #666; /* Arrow color */
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* BOLD TAGLINE AT BOTTOM */
+.tagline-bold {
+    font-size: 24px;
+    font-weight: 800;
+    color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .split-container {
+        flex-direction: column;
+    }
+
+    /* Keeps images on top for mobile if desired, or use 'reverse-mobile' class in HTML */
+    .reverse-mobile {
+        flex-direction: column-reverse; 
+    }
+}
+/* ================= TEAM SECTION ================= */
+/* ================= TEAM SECTION (FULL WIDTH) ================= */
+.team-section {
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.section-header-center {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header-center h2 {
+    font-size: 42px;
+    color: #003366;
+    margin-bottom: 10px;
+}
+
+.team-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;            /* More space between cards */
+    max-width: 1200px;    /* INCREASED: Makes cards wide across the page */
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* HORIZONTAL CARD BASE */
+.team-card-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch; /* Forces image and text to be same height */
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 300px;    /* Ensures the card feels "big" */
+}
+
+.team-card-horizontal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* CARD COLORS */
+.card-blue { background-color: #e3f2fd; border-left: 8px solid #2196f3; }
+.card-green { background-color: #e8f5e9; border-left: 8px solid #4caf50; }
+.card-yellow { background-color: #fffde7; border-left: 8px solid #fbc02d; }
+.card-pink { background-color: #fce4ec; border-left: 8px solid #e91e63; }
+
+/* IMAGE AREA (LEFT) */
+.horizontal-img {
+    width: 350px;         /* INCREASED: Bigger photo */
+    flex-shrink: 0;
+    position: relative;
+}
+
+.horizontal-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* TEXT AREA (RIGHT) */
+.horizontal-info {
+    padding: 40px;        /* INCREASED: More breathing room */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically centers text */
+}
+
+.horizontal-info h3 {
+    font-size: 26px;      /* Bigger Headline */
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.role-text {
+    font-weight: 400;
+    color: #555;
+    font-size: 20px;      /* Bigger Role Text */
+}
+
+.horizontal-info p {
+    font-size: 17px;      /* Bigger Description Text */
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+}
+
+/* RESPONSIVE (Mobile View) */
+@media (max-width: 900px) {
+    .team-card-horizontal {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .horizontal-img {
+        width: 100%;
+        height: 300px;
+    }
+    
+    .horizontal-info {
+        padding: 30px;
+    }
+}
