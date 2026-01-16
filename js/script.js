@@ -1,23 +1,30 @@
-// Wait until the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Hamburger toggle for mobile menu
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+document.addEventListener("DOMContentLoaded", () => {
 
-    hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active'); // open/close menu
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const dropdowns = document.querySelectorAll(".m-dropdown");
+
+    // Open / Close menu
+    hamburger.addEventListener("click", () => {
+        mobileMenu.classList.toggle("active");
     });
 
-    // Mobile dropdown toggle
-    const dropdownLinks = document.querySelectorAll('.dropdown > a');
+    // Dropdown accordion
+    dropdowns.forEach(drop => {
 
-    dropdownLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            if (window.innerWidth <= 768) { // only on mobile
-                e.preventDefault(); // prevent page jump
-                const submenu = link.nextElementSibling; // the .dropdown-menu
-                submenu.classList.toggle('active'); // open/close submenu
-            }
+        const link = drop.querySelector(".m-link");
+
+        link.addEventListener("click", () => {
+
+            // close others
+            dropdowns.forEach(item=>{
+                if(item !== drop){
+                    item.classList.remove("active");
+                }
+            });
+
+            drop.classList.toggle("active");
         });
     });
+
 });
