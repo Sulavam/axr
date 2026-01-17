@@ -1,30 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const hamburger = document.getElementById("hamburger");
+    const hamburger  = document.getElementById("hamburger");
     const mobileMenu = document.getElementById("mobileMenu");
-    const dropdowns = document.querySelectorAll(".m-dropdown");
+    const menuBack   = document.getElementById("menuBack");
+    const dropdowns  = document.querySelectorAll(".m-dropdown");
 
-    // Open / Close menu
+    // OPEN MENU
     hamburger.addEventListener("click", () => {
-        mobileMenu.classList.toggle("active");
+        mobileMenu.classList.add("active");
     });
 
-    // Dropdown accordion
+    // CLOSE MENU
+    menuBack.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+    });
+
+    // ACCORDION
     dropdowns.forEach(drop => {
 
         const link = drop.querySelector(".m-link");
 
         link.addEventListener("click", () => {
 
-            // close others
-            dropdowns.forEach(item=>{
-                if(item !== drop){
+            dropdowns.forEach(item => {
+                if (item !== drop) {
                     item.classList.remove("active");
                 }
             });
 
             drop.classList.toggle("active");
         });
+    });
+
+});
+document.querySelectorAll(".mobile-nav a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        mobileMenu.classList.remove("active");
+
     });
 
 });
