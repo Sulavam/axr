@@ -28,140 +28,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpeg">
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="main-header">
-  <div class="header-container">
+  <header class="main-header">
+    <div class="header-container">
 
-    <!-- LOGO -->
-    <div class="logo-area">
-        <img src="img/favicon.jpeg" alt="DBM Foundation">
-        <span class="logo-text"></span>
+      <!-- LOGO -->
+      <div class="logo-area">
+          <img src="img/favicon.jpeg" alt="DBM Foundation">
+          <span class="logo-text"></span>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul class="nav-menu">
+
+          <li class="dropdown">
+            <a href="index.html">About Us ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#vision">Our Vision</a></li>
+              <li><a href="our values.html">Our Values</a></li>
+              <li><a href="our team.html">Our Team</a></li>
+              <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
+              <li><a href="annual reports.html">Annual Reports</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Our Work ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Public Health.html">Public Health</a></li>
+              <li><a href="Skill Development.html">Skill Development</a></li>
+              <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+              <li><a href="Implementation Model.html">Implementation Model</a></li>
+            </ul>
+          </li>
+
+          <li><a href="impact and reach.html">Impact and Reach</a></li>
+
+          <li class="dropdown">
+            <a href="#">Get Involved ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Donation.html">Donation</a></li>
+              <li><a href="work-with us.html">Work With Us</a></li>
+            </ul>
+          </li>
+
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+          <li><a class="donate-btn" href="donate.html">Donate</a></li>
+
+        </ul>
+      </nav>
+
+      <!-- HAMBURGER MENU FOR MOBILE -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
+  </header>
 
-    <!-- NAVIGATION -->
-    <nav>
-      <ul class="nav-menu">
+  <!-- MOBILE FULL SCREEN MENU -->
+  <div class="mobile-menu" id="mobileMenu">
 
-        <li class="dropdown">
-          <a href="index.html">About Us ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="our vision.html">Our Vision</a></li>
-            <li><a href="our values.html">Our Values</a></li>
-            <li><a href="our team.html">Our Team</a></li>
-            <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-            <li><a href="annual reports.html">Annual Reports</a></li>
-          </ul>
-        </li>
+      <!-- BACK BUTTON -->
+      <div class="menu-back" id="menuBack">
+          <i class="fa fa-arrow-left"></i> Back
+      </div>
 
-        <li class="dropdown">
-          <a href="#">Our Work ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Public Health.html">Public Health</a></li>
-            <li><a href="Skill Development.html">Skill Development</a></li>
-            <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-            <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-          </ul>
-        </li>
+      <ul class="mobile-nav">
 
-        <li><a href="impact and reach.html">Impact and Reach</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  About Us <i class="fa fa-chevron-down"></i>
+              </div>
 
-        <li class="dropdown">
-          <a href="#">Get Involved ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Donation.html">Donation</a></li>
-            <li><a href="work-with us.html">Work With Us</a></li>
-          </ul>
-        </li>
+              <ul class="m-submenu">
+                  <li><a href="index.html#vision">Our Vision</a></li>
+                  <li><a href="our values.html">Our Values</a></li>
+                  <li><a href="our team.html">Our Team</a></li>
+                  <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
+                  <li><a href="annual reports.html">Annual Reports</a></li>
+              </ul>
+          </li>
 
-        <li><a href="partners.html">Partners</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a class="donate-btn" href="donate.html">Donate</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Our Work <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Public Health.html">Public Health</a></li>
+                  <li><a href="Skill Development.html">Skill Development</a></li>
+                  <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+                  <li><a href="Implementation Model.html">Implementation Model</a></li>
+              </ul>
+          </li>
+
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Get Involved <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Donation.html">Donation</a></li>
+                  <li><a href="work-with us.html">Work With Us</a></li>
+              </ul>
+          </li>
+
+          <li>
+              <a href="impact and reach.html" class="m-link">Impact & Reach</a>
+          </li>
+
+          <li>
+              <a href="partners.html" class="m-link">Partners</a>
+          </li>
+
+          <li>
+              <a href="contact.html" class="m-link">Contact Us</a>
+          </li>
 
       </ul>
-    </nav>
 
-    <!-- HAMBURGER MENU FOR MOBILE -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <a href="Donation.html" class="newsletter-btn">
+          Donate Now →
+      </a>
 
   </div>
-</header>
-
-<!-- MOBILE FULL SCREEN MENU -->
-<div class="mobile-menu" id="mobileMenu">
-
-    <!-- BACK BUTTON -->
-    <div class="menu-back" id="menuBack">
-        <i class="fa fa-arrow-left"></i> Back
-    </div>
-
-    <ul class="mobile-nav">
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                About Us <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="our vision.html">Our Vision</a></li>
-                <li><a href="our values.html">Our Values</a></li>
-                <li><a href="our team.html">Our Team</a></li>
-                <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-                <li><a href="annual reports.html">Annual Reports</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Our Work <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Public Health.html">Public Health</a></li>
-                <li><a href="Skill Development.html">Skill Development</a></li>
-                <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-                <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Get Involved <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Donation.html">Donation</a></li>
-                <li><a href="work-with us.html">Work With Us</a></li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="impact and reach.html" class="m-link">Impact & Reach</a>
-        </li>
-
-        <li>
-            <a href="partners.html" class="m-link">Partners</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="m-link">Contact Us</a>
-        </li>
-
-    </ul>
-
-    <a href="Donation.html" class="newsletter-btn">
-        Donate Now →
-    </a>
-
-</div>
-
 
 <!-- ================= HEADER END ================= -->
 
@@ -211,10 +211,10 @@
 
     <div class="footer-col">
       <h4>Our Work</h4>
-      <a href="public-health.html">Public Health</a>
-      <a href="skill-development.html">Skill Development</a>
-      <a href="livelihood.html">Livelihood Opportunities</a>
-      <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+        <a href="partners.html">Public Health</a>
+        <a href="Skill Development.html">Skill Development</a>
+        <a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a>
+        <a href="Implementation Model.html">Implementation Model</a>
     </div>
 
     <div class="footer-col">

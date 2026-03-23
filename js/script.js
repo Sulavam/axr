@@ -42,3 +42,15 @@ document.querySelectorAll(".mobile-nav a").forEach(link => {
     });
 
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Targeting specifically elements inside our scoped section
+    document.querySelectorAll('.dbm-skill-page .reveal-left, .dbm-skill-page .reveal-right, .dbm-skill-page .reveal-up').forEach(el => observer.observe(el));
+});

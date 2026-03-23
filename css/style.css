@@ -201,7 +201,7 @@ body{
 
 /* DONATE BUTTON */
 .donate-btn{
-    background: #fdb515;
+    background: #5fa8e0;
     padding: 8px 18px;
     border-radius: 6px;
     color: #000;
@@ -383,15 +383,15 @@ body{
 .hero-overlay{
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, #003366 25%, transparent);
+    background: linear-gradient(to top, #003366 18%, transparent);
     z-index: 1;
 }
 
 /* CONTENT */
 .hero-content{
     position: relative;
-    padding: 50px;
-    max-width: 900px;
+    padding: 52px;
+    max-width: 2300px;
     z-index: 2;
 }
 
@@ -400,7 +400,7 @@ body{
     color: #fff;
     font-size: 52px;
     line-height: 1.3;
-    font-weight: 700;
+    font-weight: 580;
 }
 
 
@@ -535,7 +535,7 @@ footer{
     border-top: 1px solid rgba(255,255,255,0.1); /* Subtle divider */
     padding-top: 20px;
 }
-
+/* ================= FOOTER ================= */
 /* RESPONSIVE */
 @media(max-width: 768px){
     footer{
@@ -546,134 +546,152 @@ footer{
         gap: 30px;
     }
 }
-/* ================= FOCUS AREAS ================= */
-
-.focus-section{
-    padding:90px 20px;
-    background:linear-gradient(to bottom,#f8fbff,#ffffff);
+/* ================= focus area ================= */
+:root {
+  --dbm-1: #0a254d; /* Deep Blue */
+  --dbm-2: #1e4d8c; /* Mid Blue */
+  --dbm-3: #5fa8e0; /* Light Blue */
+  --dbm-4: #89cff0; /* Sky Blue */
 }
 
-.container{
-    max-width:1200px;
-    margin:auto;
+/* Locate this section in your CSS and replace it */
+.focus-section .section-title {
+  font-size: 39px !important;    /* Forces the size to 60px */
+  color: #003366 !important;    /* Forces the Navy Blue color */
+  font-weight: 900;             /* Keeps it thick and professional */
+  margin-bottom: 15px;          /* Proper spacing for the dots below */
+  text-align: center;           /* Ensures it stays centered */
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.section-title{
-    text-align:center;
-    font-size:42px;
-    font-weight:700;
-    color:#003366;
-    margin-bottom:10px;
+/* Header & Logo Dots Decoration */
+/* Also, fix the header-group margin which was empty */
+.header-group {
+  text-align: center;
+  margin-bottom: 60px;          /* Creates a clean gap before the cards start */
+}
+.section-title {
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--dbm-1);
+  margin-bottom: 10px;
 }
 
-.section-subtitle{
-    text-align:center;
-    max-width:650px;
-    margin:0 auto 60px;
-    font-size:18px;
-    color:#555;
+.dbm-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.focus-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:30px;
+.dbm-dots span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--dbm-1);
+}
+.dbm-dots span:nth-child(2) { background: var(--dbm-2); }
+.dbm-dots span:nth-child(3) { background: #7fbceb; }
+.dbm-dots span:nth-child(4) { background: var(--dbm-3); }
+.dbm-dots span:nth-child(5) { background: #3c91d4; }
+.dbm-dots span:nth-child(6) { background: var(--dbm-4); }
+
+/* 3D Stack Layout */
+.focus-3d-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
 }
 
-.focus-card{
-    background:#fff;
-    padding:40px 30px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:0 10px 30px rgba(0,0,0,0.06);
-    transition:all 0.4s ease;
-    position:relative;
-    overflow:hidden;
+.card-3d {
+  position: relative;
+  transition: transform 0.4s ease;
 }
 
-.focus-card::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:linear-gradient(135deg,#003366,#0066cc);
-    opacity:0;
-    transition:0.4s;
+.card-inner {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  background: #fff;
+  border-radius: 20px;
+  border: 1px solid rgba(0,0,0,0.05);
+  /* The 3D Shadow Look */
+  box-shadow: 
+    0 10px 20px rgba(0,0,0,0.05),
+    0 6px 6px rgba(0,0,0,0.05),
+    0 0 100px -10px rgba(10, 37, 77, 0.05);
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.focus-card:hover::before{
-    opacity:1;
+/* Hover 3D Effect */
+.card-3d:hover .card-inner {
+  transform: rotateX(2deg) rotateY(-1deg) translateY(-10px);
+  box-shadow: 
+    0 25px 50px -12px rgba(10, 37, 77, 0.2),
+    0 0 0 1px rgba(10, 37, 77, 0.1);
 }
 
-.focus-card *{
-    position:relative;
-    z-index:1;
+/* Color Accents using Logo Colors */
+.deep-blue .card-inner { border-left: 10px solid var(--dbm-1); }
+.mid-blue  .card-inner { border-left: 10px solid var(--dbm-2); }
+.light-blue .card-inner { border-left: 10px solid var(--dbm-3); }
+.sky-blue   .card-inner { border-left: 10px solid var(--dbm-4); }
+
+.card-icon {
+  font-size: 50px;
+  margin-right: 40px;
+  filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
 }
 
-.focus-card:hover{
-    transform:translateY(-12px);
+.card-text {
+  flex: 1;
 }
 
-.focus-icon{
-    font-size:48px;
-    background:#eef5ff;
-    width:90px;
-    height:90px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin:0 auto 25px;
-    border-radius:50%;
-    transition:0.4s;
+.card-text h3 {
+  font-size: 26px;
+  color: var(--dbm-1);
+  margin-bottom: 12px;
+  font-weight: 800;
 }
 
-.focus-card:hover .focus-icon{
-    background:#fff;
+.card-text p {
+  color: #555;
+  line-height: 1.7;
+  font-size: 16px;
+  max-width: 650px;
 }
 
-.focus-card h3{
-    font-size:22px;
-    margin-bottom:15px;
-    color:#003366;
-    transition:0.4s;
+/* 3D Button */
+.btn-3d {
+  text-decoration: none;
+  background: var(--dbm-1);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  margin-left: 40px;
+  box-shadow: 0 4px 0 #000c1a; /* Button thickness */
+  transition: all 0.2s ease;
 }
 
-.focus-card p{
-    font-size:16px;
-    line-height:1.6;
-    color:#555;
-    margin-bottom:25px;
-    transition:0.4s;
+.btn-3d:hover {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 #000c1a;
+  background: var(--dbm-2);
 }
 
-/* Read More Button */
-.focus-btn{
-    display:inline-block;
-    padding:12px 26px;
-    background:#003366;
-    color:#fff;
-    border-radius:30px;
-    font-size:15px;
-    font-weight:600;
-    text-decoration:none;
-    transition:all 0.4s ease;
+/* Responsive Scaling */
+@media (max-width: 992px) {
+  .card-inner { flex-direction: column; text-align: center; }
+  .card-icon { margin: 0 0 20px 0; }
+  .btn-3d { margin: 25px 0 0 0; width: 100%; text-align: center; }
+  .card-text p { margin: 0 auto; }
 }
-
-.focus-card:hover .focus-btn{
-    background:#ffffff;
-    color:#003366;
-}
-
-.focus-card:hover h3,
-.focus-card:hover p{
-    color:#ffffff;
-}
-
-/* Responsive */
-@media(max-width:768px){
-    .section-title{
-        font-size:32px;
-    }
-}
+/* ================= Focus area ================= */
 /* ================= IMPACT SECTION ================= */
 .impact-section {
     position: relative;
@@ -720,7 +738,7 @@ footer{
     font-weight: 500;
     opacity: 0.9;
 }
-
+/* ================= IMPACT SECTION ================= */
 /* ================= CTA SECTION ================= */
 .cta-section {
     padding: 80px 20px;
@@ -809,140 +827,119 @@ footer{
         text-align: center;
     }
 }
+/* ================= CTA SECTION ================= */
 /* ================= VISION & MISSION SECTION ================= */
-.vision-mission-section {
-    padding: 80px 20px;
-    background: #fff; /* or #f9fafc for slight contrast */
+.dbm-vision-mission {
+    --dbm-navy: #0a254d;
+    --dbm-blue: #5db0e5;
+    --dbm-soft: rgba(93, 176, 229, 0.1);
+    
+    padding: 60px 5%;
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
-.vm-container {
-    display: flex;
-    align-items: center; /* Vertically center content */
-    justify-content: space-between;
-    gap: 50px;
-    flex-wrap: wrap;
+.dbm-grid {
+    max-width: 1800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Balanced 50/50 split */
+    gap: 30px;
+    align-items: stretch;
 }
 
-/* LEFT COLUMN: IMAGE */
-.vm-image-col {
-    flex: 1;
-    min-width: 300px;
-}
-
-.vm-img-wrapper {
+/* Image container */
+.dbm-image-container {
     position: relative;
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-.vm-img-wrapper img {
+.dbm-img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
     object-fit: cover;
+    display: block;
 }
-
-/* Play Icon (Optional stylistic touch from screenshot) */
-.play-icon {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background: #fdb515; /* Your theme yellow */
-    color: #fff;
-    width: 50px;
-    height: 50px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-}
-
-/* RIGHT COLUMN: CARDS */
-.vm-content-col {
-    flex: 1;
-    min-width: 300px;
+/* Card Stack - Smaller proportions */
+.dbm-card-stack {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px; /* Tighter gap for "small" look */
 }
 
-.vm-card {
+.dbm-card {
     background: #fff;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Soft shadow */
-    border: 1px solid #eee;
+    padding: 20px 25px; /* Reduced padding to make cards smaller */
+    border-radius: 12px;
     display: flex;
-    align-items: flex-start;
-    gap: 20px;
-    transition: transform 0.3s ease;
+    gap: 15px;
+    border: 1px solid #f0f4f8;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    position: relative;
+    overflow: hidden; /* Fixes the blue bar bleed */
+    flex: 1;
+    transition: 0.3s ease;
 }
 
-.vm-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+/* Fixed Vertical Accent Bar */
+.dbm-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px; /* Slightly thinner for small cards */
+    background: var(--dbm-blue);
+    opacity: 0;
+    transition: 0.3s;
 }
 
-/* The Checkmark Icon */
-.vm-icon {
-    background: #eafbf0; /* Light green bg */
-    color: #28a745;      /* Green check color */
-    min-width: 40px;
-    height: 40px;
+.dbm-card.dbm-active::before,
+.dbm-card:hover::before {
+    opacity: 1;
+}
+
+.dbm-card:hover {
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(10, 37, 77, 0.08);
+}
+
+/* Icon & Text Sizing */
+.dbm-check {
+    width: 38px; /* Smaller icon circle */
+    height: 38px;
+    background: var(--dbm-soft);
+    color: var(--dbm-blue);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: bold;
-    font-size: 18px;
+    flex-shrink: 0;
+    font-size: 16px;
 }
 
-.vm-text h3 {
-    font-size: 20px;
-    margin-bottom: 8px;
-    color: #333;
-    font-weight: 700;
+.dbm-content h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.6rem; /* Balanced header size */
+    color: var(--dbm-navy);
+    font-weight: 1000;
 }
 
-.vm-text p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #666;
+.dbm-content p {
     margin: 0;
+    font-size: 0.95rem; /* Slightly smaller body text */
+    line-height: 1.4;
+    color: #555;
 }
 
-/* Small Read More Button Styling */
-.vm-btn-small {
-    display: inline-block;
-    margin-top: 12px;
-    font-size: 14px;
-    font-weight: 700;
-    color: #003366;      /* Blue text */
-    text-decoration: none;
-    border-bottom: 2px solid #fdb515; /* Yellow underline */
-    transition: all 0.3s ease;
+/* Mobile Fixes */
+@media (max-width: 991px) {
+    .dbm-grid { grid-template-columns: 1fr; }
+    .dbm-image-container { height: 350px; }
 }
-
-.vm-btn-small:hover {
-    color: #fdb515;      /* Text turns yellow on hover */
-    border-bottom-color: #003366; /* Underline turns blue */
-    padding-left: 5px;   /* Slight movement effect */
-}
-
-/* Responsive adjustment */
-@media (max-width: 900px) {
-    .vm-container {
-        flex-direction: column;
-    }
-    
-    .vm-image-col, .vm-content-col {
-        width: 100%;
-    }
-}
+/* ================= VISION & MISSION SECTION ================= */
 /* ================= CLINICAL SECTION ================= */
 .clinical-section {
     padding: 90px 20px;
@@ -963,95 +960,8 @@ footer{
     display: inline-block;
 }
 
-/* Decorative underline for title */
-.section-header h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    background: #fdb515; /* Yellow accent */
-    margin: 10px auto 0;
-    border-radius: 2px;
-}
 
-.section-header p {
-    color: #666;
-    font-size: 16px;
-}
-
-/* GRID LAYOUT */
-.clinical-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 30px;
-}
-
-/* CARD STYLE */
-.clinical-card {
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 51, 102, 0.05); /* Subtle blue shadow */
-    border-bottom: 4px solid transparent; /* Hidden bottom border for hover effect */
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-/* HOVER ANIMATION: LIFT & BORDER */
-.clinical-card:hover {
-    transform: translateY(-12px);
-    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.12);
-    border-bottom-color: #fdb515; /* Yellow line appears on hover */
-}
-
-/* ICON STYLING */
-.icon-box {
-    width: 80px;
-    height: 80px;
-    background: #eef5ff;
-    color: #003366;
-    font-size: 32px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 25px;
-    transition: all 0.4s ease;
-}
-
-/* HOVER ANIMATION: ICON */
-.clinical-card:hover .icon-box {
-    background: #003366;
-    color: #ffffff;
-    transform: rotateY(180deg); /* Cool flip effect */
-}
-
-.clinical-card h3 {
-    font-size: 20px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.clinical-card p {
-    font-size: 15px;
-    line-height: 1.6;
-    color: #666;
-}
-
-.small-text {
-    font-size: 14px; /* Slightly smaller text for the long list in card 4 */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .section-header h2 {
-        font-size: 28px;
-    }
-}
-/* ================= OUR VISION ================= */
+/* ================= CLINICAL SECTION ================= */
 /* ================= PAGE HERO (Small Hero) ================= */
 .page-hero {
     position: relative;
@@ -1158,7 +1068,7 @@ footer{
     color: #555;
     margin-bottom: 40px;
 }
-
+/* ================= DREAM & GOALS SECTIONS ================= */
 /* Nested Grid for Mission/Vision */
 .mission-vision-grid {
     display: grid;
@@ -1346,109 +1256,1624 @@ footer{
     }
 }
 /* ================= TEAM SECTION ================= */
-/* ================= TEAM SECTION (FULL WIDTH) ================= */
-.team-section {
-    padding: 80px 20px;
-    background: #fff;
+/* ================= OUR TEAM PAGE (FINAL BRANDED) ================= */
+
+#our-team-page {
+    padding: 100px 0 !important;
+    background-color: #fbfcfd;
 }
 
-.section-header-center {
-    text-align: center;
-    margin-bottom: 60px;
+#our-team-page .container-manual {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.section-header-center h2 {
-    font-size: 42px;
-    color: #003366;
-    margin-bottom: 10px;
+/* HEADER: Implementation Model Style Logic */
+#our-team-page .main-title {
+    font-size: 42px !important;
+    font-weight: 900 !important;
+    color: #003366 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
 }
 
+#our-team-page .long-subtitle {
+    display: block !important;
+    text-align: center !important;
+    
+    /* THE KEY: Increase this to allow the text to stretch wide */
+    max-width: 1200px !important; 
+    
+    /* Centering the block */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 25px !important;
+    margin-bottom: 60px !important;
+    
+    /* Scaling & Spacing */
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important; /* Premium air between long lines */
+    color: #111111 !important;
+    padding: 0 20px !important; /* Mobile safety */
+}
+#our-team-page .section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+} 
+
+/* TEAM LIST WRAPPER */
 .team-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;            /* More space between cards */
-    max-width: 1200px;    /* INCREASED: Makes cards wide across the page */
-    width: 100%;
-    margin: 0 auto;
+    gap: 40px; /* Space between the 4 cards */
 }
 
 /* HORIZONTAL CARD BASE */
 .team-card-horizontal {
     display: flex;
     flex-direction: row;
-    align-items: stretch; /* Forces image and text to be same height */
-    border-radius: 15px;
+    background: #ffffff;
+    border-radius: 20px;
     overflow: hidden;
+    border: 1px solid #eef2f6;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    min-height: 300px;    /* Ensures the card feels "big" */
+    min-height: 300px;
 }
 
 .team-card-horizontal:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transform: translateX(12px); /* Subtle slide right on hover */
+    box-shadow: 0 20px 45px rgba(10, 29, 55, 0.08);
 }
 
-/* CARD COLORS */
-.card-blue { background-color: #e3f2fd; border-left: 8px solid #2196f3; }
-.card-green { background-color: #e8f5e9; border-left: 8px solid #4caf50; }
-.card-yellow { background-color: #fffde7; border-left: 8px solid #fbc02d; }
-.card-pink { background-color: #fce4ec; border-left: 8px solid #e91e63; }
+/* --- BRAND LOGO COLOR BORDERS --- */
+.card-navy { border-left: 10px solid #0A1D37; }
+.card-royal { border-left: 10px solid #1E4D8C; }
+.card-mid { border-left: 10px solid #3B91D0; }
+.card-sky { border-left: 10px solid #82C0E9; }
 
-/* IMAGE AREA (LEFT) */
+/* IMAGE AREA */
 .horizontal-img {
-    width: 350px;         /* INCREASED: Bigger photo */
+    width: 360px;
     flex-shrink: 0;
-    position: relative;
 }
 
 .horizontal-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
-/* TEXT AREA (RIGHT) */
+/* TEXT AREA */
 .horizontal-info {
-    padding: 40px;        /* INCREASED: More breathing room */
+    padding: 45px;
     flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically centers text */
+    justify-content: center;
 }
 
 .horizontal-info h3 {
-    font-size: 26px;      /* Bigger Headline */
-    color: #000;
-    font-weight: 700;
+    font-size: 26px;
+    color: #0A1D37;
+    font-weight: 800;
     margin-bottom: 15px;
 }
 
 .role-text {
-    font-weight: 400;
-    color: #555;
-    font-size: 20px;      /* Bigger Role Text */
+    font-weight: 500;
+    font-size: 18px;
+    color: #3B91D0; /* Branded role highlight */
+    margin-left: 10px;
 }
 
 .horizontal-info p {
-    font-size: 17px;      /* Bigger Description Text */
-    line-height: 1.8;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    margin: 0;
+}
+
+/* --- RESPONSIVE MOBILE FIX --- */
+@media (max-width: 900px) {
+    .team-card-horizontal { 
+        flex-direction: column; 
+        border-left: none; 
+        border-top: 10px solid #0A1D37; /* Moves border to top for mobile */
+    }
+    .horizontal-img { 
+        width: 100%; 
+        height: 320px; 
+    }
+    .horizontal-info { 
+        padding: 30px; 
+        text-align: center;
+    }
+    .role-text { 
+        display: block; 
+        margin-left: 0; 
+        margin-top: 5px; 
+    }
+}
+/* ================= WHY DBM POINT-WISE UI ================= */
+
+#why-dbm-points {
+    padding: 80px 0 !important;
+    background-color: #ffffff;
+}
+
+.vision-points-wrapper {
+    max-width: 120px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vision-point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 15px;
+    border-left: 6px solid #0A1D37; /* DBM Navy */
+    transition: 0.3s ease;
+}
+
+.vision-point-item:hover {
+    transform: translateX(10px);
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(10, 29, 55, 0.05);
+    border-left-color: #3B91D0; /* DBM Light Blue on hover */
+}
+
+.point-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #3B91D0; /* DBM Light Blue */
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.point-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
     color: #333;
     margin: 0;
 }
 
-/* RESPONSIVE (Mobile View) */
-@media (max-width: 900px) {
-    .team-card-horizontal {
-        flex-direction: column;
-        height: auto;
-    }
+/* Specific styling for the first point to stand out */
+.vision-point-item:first-child p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0A1D37;
+}
 
-    .horizontal-img {
-        width: 100%;
-        height: 300px;
+/* Responsive */
+@media (max-width: 768px) {
+    .vision-point-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
     }
+    .point-number {
+        font-size: 1.4rem;
+    }
+}
+/* ================= TEAM SECTION (FULL WIDTH) ================= */
+/* ================= PREMIUM CONTACT UI ================= */
+
+.reach-out-section {
+    padding: 100px 0;
+    background: #fbfcfd;
+}
+
+.contact-wrapper-premium {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 50px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+/* LEFT PANEL: INFO CARDS */
+.contact-info-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-item-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #eef2f6;
+    transition: 0.3s ease;
+}
+
+.info-item-card:hover {
+    transform: translateX(10px);
+    border-color: #3B91D0;
+    box-shadow: 0 10px 30px rgba(10, 29, 55, 0.05);
+}
+
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    background: #f0f7ff;
+    color: #0A1D37;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.info-text h3 {
+    font-size: 1.1rem;
+    color: #0A1D37;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.info-text p {
+    font-size: 0.95rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* RIGHT PANEL: GLASS FORM */
+.contact-form-glass {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.04);
+    border: 1px solid #ffffff;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0A1D37;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.input-group input, .input-group textarea {
+    width: 100%;
+    padding: 15px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input:focus, .input-group textarea:focus {
+    background: #fff;
+    border-color: #3B91D0;
+    box-shadow: 0 0 0 4px rgba(59, 145, 208, 0.1);
+    outline: none;
+}
+
+.submit-btn-premium {
+    width: 100%;
+    background: #0A1D37;
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.submit-btn-premium:hover {
+    background: #3B91D0;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(59, 145, 208, 0.3);
+}
+
+/* MAP BOX */
+.premium-map-box {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .contact-wrapper-premium { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+}
+/* ================= Contact us css================= */
+/* ================= About us  ================= */
+/* Using DBM Logo Hex Palette */
+:root {
+  --dbm-navy: #0a254d;
+  --dbm-blue: #1e4d8c;
+  --dbm-light: #5fa8e0;
+  --dbm-sky: #89cff0;
+  --white: #ffffff;
+}
+
+.dbm-about-section {
+  padding: 100px 20px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* 3D Visual Effects */
+.about-visuals {
+  perspective: 2000px;
+}
+
+.scene-3d {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  transform-style: preserve-3d;
+}
+
+.depth-shape {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  width: 90%;
+  height: 80%;
+  background: var(--dbm-navy);
+  border-radius: 30px;
+  transform: translateZ(-50px) rotateY(15deg);
+  opacity: 0.1;
+}
+
+.image-layer {
+  position: absolute;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(10, 37, 77, 0.12);
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  /* FIX: Background color prevents empty space looking "broken" */
+  background-color: #f8faff; 
+}
+
+.image-layer img {
+  width: 100%;
+  height: 100%;
+  /* CHANGE THIS: 'contain' shows the FULL image without zoom/crop */
+  object-fit: contain; 
+  display: block;
+}
+
+.layer-1 {
+  width: 85%;
+  height: 420px;
+  top: 0;
+  left: 0;
+  transform: translateZ(20px) rotateY(10deg);
+  background-color: var(--dbm-navy); /* Solid DBM background for first image */
+}
+
+.layer-2 {
+  width: 65%; /* Slightly wider to show full horizontal photos */
+  height: 300px;
+  bottom: 0;
+  right: -20px;
+  border: 10px solid var(--white);
+  transform: translateZ(100px) rotateY(10deg);
+  background-color: var(--dbm-sky); /* Sky blue background for second image */
+}
+
+.status-pill {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--dbm-navy);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 30px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+/* Hover interactions */
+.scene-3d:hover .layer-1 { transform: translateZ(40px) rotateY(0deg); }
+.scene-3d:hover .layer-2 { transform: translateZ(140px) rotateY(0deg); }
+
+/* Content Styling (Consistent with your previous version) */
+.brand-line {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.brand-line .dot {
+  width: 10px;
+  height: 10px;
+  background: var(--dbm-light);
+  border-radius: 50%;
+}
+
+.brand-line .label {
+  font-weight: 800;
+  color: var(--dbm-blue);
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.main-title {
+  font-size: 42px;
+  color: var(--dbm-navy);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.logo-text { color: var(--dbm-light); }
+
+.highlight {
+  font-size: 19px;
+  font-weight: 600;
+  color: #1a202c;
+  line-height: 1.6;
+  margin-bottom: 25px;
+  padding-left: 20px;
+  border-left: 5px solid var(--dbm-sky);
+}
+
+.description p {
+  font-size: 16px;
+  color: #4a5568;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.target-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.target-groups span {
+  background: #f0f7ff;
+  color: var(--dbm-blue);
+  padding: 6px 15px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--dbm-sky);
+}
+
+/* Mobile Scaling */
+@media (max-width: 992px) {
+  .about-grid { grid-template-columns: 1fr; text-align: center; }
+  .scene-3d { margin: 0 auto 60px; max-width: 500px; height: 400px; }
+  .brand-line { justify-content: center; }
+  .highlight { border-left: none; padding-left: 0; }
+  .target-groups { justify-content: center; }
+}
+/* ================= About end  ================= */
+/* ================= Skill devlopment start  ================= */
+/* --- SCOPED WRAPPER --- */
+.dbm-skill-page {
+    --dbm-deep: #0A1D37;
+    --dbm-light: #1D5F85;
+    --dot-1: #0A1D37; --dot-2: #1E4D8C; --dot-3: #82C0E9;
+    --dot-4: #5DACE2; --dot-5: #3B91D0; --dot-6: #95D9F1;
+    --border-color: #e2e8f0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.dbm-skill-page .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* RE-ZEROING HEADERS (Fix: Removes yellow lines & theme-injected decorations) */
+.dbm-skill-page h1, 
+.dbm-skill-page h2, 
+.dbm-skill-page .section-title, 
+.dbm-skill-page .main-title {
+    border: none !important;
+    text-decoration: none !important;
+    padding-bottom: 0 !important;
+    background: none !important;
+    box-shadow: none !important;
+}
+
+/* Specifically kills the yellow decorative lines often found in themes */
+.dbm-skill-page h1:after, .dbm-skill-page h1:before,
+.dbm-skill-page h2:after, .dbm-skill-page h2:before,
+.dbm-skill-page .section-title:after, .dbm-skill-page .section-title:before,
+.dbm-skill-page .main-title:after, .dbm-skill-page .main-title:before {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    height: 0 !important;
+    width: 0 !important;
+}
+
+/* LOGO DOTS */
+.dbm-skill-page .logo-dots { display: flex; gap: 8px; margin: 20px 0; }
+.dbm-skill-page .logo-dots.centered { justify-content: center; margin: 20px auto 40px; }
+.dbm-skill-page .dot { width: 12px; height: 12px; border-radius: 50%; }
+.dbm-skill-page .d1 { background: var(--dot-1); } .dbm-skill-page .d2 { background: var(--dot-2); }
+.dbm-skill-page .d3 { background: var(--dot-3); } .dbm-skill-page .d4 { background: var(--dot-4); }
+.dbm-skill-page .d5 { background: var(--dot-5); } .dbm-skill-page .d6 { background: var(--dot-6); }
+
+/* ABOUT STYLE SIDEBAR BOX */
+.dbm-skill-page .about-style-box {
+    border-left: 5px solid #82C0E9; /* Light blue from dots */
+    padding: 15px 0 15px 30px;
+    margin: 30px 0;
+}
+
+.dbm-skill-page .about-style-box p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #44546a;
+    font-weight: 500;
+}
+
+/* INTRO CONTENT */
+.dbm-skill-page .skill-intro { padding: 80px 0; }
+.dbm-skill-page .intro-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: center; }
+.dbm-skill-page .sub-badge { color: var(--dbm-light); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+.dbm-skill-page .main-title { color: var(--dbm-deep); font-size: 3.2rem; font-weight: 700; margin-top: 10px; }
+.dbm-skill-page .extra-content p { font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 20px; }
+.dbm-skill-page .main-feat-img { width: 100%; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+
+/* DOMAINS (4 CARDS) */
+.dbm-skill-page .focus-domains { background: #f9fbff; padding: 100px 0; text-align: center; }
+.dbm-skill-page .grid-row-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.dbm-skill-page .card-3d-content { 
+    background: #fff; height: 100%; border-radius: 15px; padding: 40px 20px;
+    border: 2px solid var(--border-color); transition: 0.4s ease;
+}
+.dbm-skill-page .card-3d-wrap:hover .card-3d-content { border-color: var(--dbm-light); box-shadow: 0 15px 30px rgba(11,60,93,0.1); transform: translateY(-10px); }
+.dbm-skill-page .icon-circle { width: 70px; height: 70px; background: var(--dbm-deep); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 1.6rem; }
+
+/* IMPACT BANNER */
+.dbm-skill-page .impact-gradient { background: linear-gradient(135deg, var(--dbm-deep), var(--dbm-light)); padding: 80px 0; color: #fff; text-align: center; }
+
+/* GALLERY */
+.dbm-skill-page .gallery-section { padding: 80px 0; }
+.dbm-skill-page .gallery-grid-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.dbm-skill-page .gallery-item { height: 260px; border-radius: 12px; overflow: hidden; }
+.dbm-skill-page .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+.dbm-skill-page .gallery-item:hover img { transform: scale(1.1); }
+
+/* ANIMATIONS */
+.dbm-skill-page .reveal-left, .dbm-skill-page .reveal-right, .dbm-skill-page .reveal-up { opacity: 0; transition: 1s ease-out; }
+.dbm-skill-page .reveal-left { transform: translateX(-40px); }
+.dbm-skill-page .reveal-right { transform: translateX(40px); }
+.dbm-skill-page .reveal-up { transform: translateY(40px); }
+.dbm-skill-page .active { opacity: 1; transform: translate(0, 0); }
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 1024px) { .dbm-skill-page .grid-row-4, .dbm-skill-page .gallery-grid-row { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 768px) { .dbm-skill-page .intro-grid, .dbm-skill-page .grid-row-4, .dbm-skill-page .gallery-grid-row { grid-template-columns: 1fr; } .dbm-skill-page .main-title { font-size: 2.4rem; } }
+/* Forces the 3 cards to be horizontal side-by-side */
+.dbm-skill-page .grid-row-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 25px;
+    margin-top: 40px;
+    align-items: stretch;
+}
+
+/* Fix for icons to be perfectly centered */
+.dbm-skill-page .icon-circle i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ================= Skill devlopment End  ================= */
+/* ================= Implementation Model ================= */
+
+#core-domains-index {
+    padding: 100px 0 !important;
+    background-color: #ffffff !important;
+}
+
+/* 1. SECTION WIDTH - Change this to make the whole row wider/narrower */
+#core-domains-index .container-manual {
+    max-width: 1250px !important; 
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. HEADER & WIDE SUBTITLE */
+#core-domains-index .main-title {
+    font-size: 42px !important;
+    font-weight: 900 !important;
+    color: #003366 !important;
+    text-align: center !important;
+    margin-bottom: 5px !important;
+}
+
+#core-domains-index .long-subtitle {
+    display: block !important;
+    text-align: center !important;
     
-    .horizontal-info {
-        padding: 30px;
+    /* THE KEY: Increase this to allow the text to stretch wide */
+    max-width: 1200px !important; 
+    
+    /* Centering the block */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 25px !important;
+    margin-bottom: 60px !important;
+    
+    /* Scaling & Spacing */
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important; /* Premium air between long lines */
+    color: #111111 !important;
+    padding: 0 20px !important; /* Mobile safety */
+}
+
+/* Ensure the header container itself isn't too narrow */
+#core-domains-index .section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+/* 3. THE MANUAL GRID */
+.manual-grid {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 20px !important; /* GAP: Space between cards */
+    flex-wrap: wrap;
+}
+
+/* 4. THE CARD BOX - MANUAL SHAPE CONTROLS */
+.manual-card {
+    background: #fff !important;
+    border: 1px solid #d1d9e6 !important;
+    border-radius: 15px !important;
+    
+    /* --- MANUAL SIZE ADJUSTMENTS --- */
+    flex: 0 0 280px !important;    /* WIDTH: Change 280px to make cards wider or narrower */
+    min-height: 450px !important;  /* HEIGHT: Change 450px to make cards taller or shorter */
+    padding: 50px 30px !important; /* INTERNAL SPACING: Adjust for "Square" feel */
+    /* ------------------------------ */
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Hover Effect: Modern Lift */
+.manual-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 51, 102, 0.08);
+    border-color: #0A1D37 !important;
+}
+
+/* 5. ICON & TYPOGRAPHY */
+.manual-card .icon-circle {
+    width: 80px !important;
+    height: 80px !important;
+    background: #0A1D37 !important;
+    color: #fff !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin-bottom: 30px !important;
+    font-size: 2rem !important;
+}
+
+.manual-card h3 {
+    font-size: 1.3rem !important;
+    font-weight: 800 !important;
+    color: #0A1D37 !important;
+    margin-bottom: 15px !important;
+    line-height: 1.4 !important;
+}
+
+.manual-card p {
+    font-size: 0.98rem !important;
+    color: #555 !important;
+    line-height: 1.7 !important;
+    margin-bottom: 25px !important;
+    flex-grow: 1; /* Ensures text fills space and pushes link to bottom */
+}
+
+/* 6. READ MORE LINK (Redirect style) */
+.manual-card .read-more-link {
+    font-weight: 700 !important;
+    color: #0A1D37 !important;
+    text-decoration: none !important;
+    font-size: 1rem !important;
+    transition: 0.3s;
+}
+
+.manual-card .read-more-link:hover {
+    color: #1D5F85 !important;
+    text-decoration: underline !important;
+}
+
+/* 7. LOGO DOT COLORS */
+#core-domains-index .logo-dots.centered { display: flex; justify-content: center; gap: 8px; margin: 15px auto; }
+#core-domains-index .d1 { background: #0A1D37 !important; }
+#core-domains-index .d2 { background: #1E4D8C !important; }
+#core-domains-index .d3 { background: #82C0E9 !important; }
+#core-domains-index .d4 { background: #5DACE2 !important; }
+#core-domains-index .d5 { background: #3B91D0 !important; }
+#core-domains-index .d6 { background: #95D9F1 !important; }
+
+/* 8. RESPONSIVE: Stacks on mobile */
+@media (max-width: 768px) {
+    .manual-card { flex: 0 0 100% !important; max-width: 400px; min-height: auto !important; }
+    #core-domains-index .main-title { font-size: 2.5rem !important; }
+}
+/* ================= Implementation Model End ================= */
+/* ================= IMPLEMENTATION PAGE UI ================= */
+
+#implementation-page {
+    padding: 60px 0;
+    background-color: #fbfcfd;
+}
+
+#implementation-page .container-manual {
+    max-width: 1100px; /* Keeps reading width comfortable */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Adjustments */
+#implementation-page .main-title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #0A1D37;
+    margin-bottom: 10px;
+}
+
+#implementation-page .long-subtitle {
+display: block !important;
+    text-align: center !important;
+    
+    /* THE KEY: Increase this to allow the text to stretch wide */
+    max-width: 1200px !important; 
+    
+    /* Centering the block */
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 25px !important;
+    margin-bottom: 60px !important;
+    
+    /* Scaling & Spacing */
+    font-size: 1.05rem !important;
+    line-height: 1.8 !important; /* Premium air between long lines */
+    color: #111111 !important;
+    padding: 0 20px !important; /* Mobile safety */
+}
+/* Ensure the header container itself isn't too narrow */
+#implementation-page  .section-header {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+/* Content Blocks */
+.impl-content-wrapper {
+    position: relative;
+    padding-left: 40px;
+}
+
+/* The Vertical Line */
+.impl-content-wrapper::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #eef2f6;
+}
+
+.impl-block {
+    position: relative;
+    background: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    border: 1px solid #eef2f6;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+/* The Number Circle on the Line */
+.impl-number {
+    position: absolute;
+    left: -58px;
+    top: 50px;
+    width: 36px;
+    height: 36px;
+    background: #0A1D37;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.9rem;
+    border: 4px solid #fbfcfd;
+}
+
+/* Text Styling */
+.impl-text h3 {
+    font-size: 2rem;
+    color: #0A1D37;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.intro-p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+/* Key Approaches List */
+.key-approaches h4 {
+    font-size: 1.1rem;
+    color: #0A1D37;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.impl-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two column list */
+    gap: 15px 40px;
+}
+
+.impl-list li {
+    position: relative;
+    padding-left: 25px;
+    font-size: 1rem;
+    color: #333333;
+    line-height: 1.5;
+}
+
+.impl-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #3B91D0; /* DBM Light Blue */
+    font-weight: bold;
+}
+
+/* Final Highlight Block */
+.highlight-block {
+    background: #0A1D37;
+    border: none;
+}
+.highlight-block h3, .highlight-block p {
+    color: #ffffff !important;
+}
+.highlight-block .impl-number {
+    background: #3B91D0;
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .impl-list { grid-template-columns: 1fr; }
+    .impl-block { padding: 30px; }
+    .impl-number { left: -54px; }
+}
+/* ================= IMPLEMENTATION PAGE UI ================= */
+/* ================= PARTNERS SECTION  ================= */
+
+#partners-section {
+    padding: 80px 0 !important;
+    background-color: #f9fbff; /* Very light blue to make white cards pop */
+}
+
+/* 3-Column Grid */
+.partners-grid-3 {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 30px !important;
+    margin-top: 50px;
+    align-items: center; /* Vertical alignment */
+}
+
+.partner-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #eef2f6;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Keeps the boxes square-ish and uniform */
+    min-height: 250px; 
+}
+
+/* The Magic Fix for Different Logo Shapes */
+.partner-logo-box {
+    width: 100%;
+    height: 150px; /* Adjust height based on your preference */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-logo-box img {
+    max-width: 100%;
+    max-height: 100%;
+    /* This prevents logos from stretching or pixelating */
+    object-fit: contain; 
+    filter: grayscale(100%); /* Optional: Makes all logos look uniform */
+    opacity: 0.8;
+    transition: 0.3s ease;
+}
+
+/* Hover Effect: Bring back color and lift card */
+.partner-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 51, 102, 0.08);
+    border-color: #0A1D37;
+}
+
+.partner-card:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .partners-grid-3 {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+    }
+    .partner-card { min-height: 200px; }
+}
+/* ================= PARTNERS SECTION  =================
+/* ================= CIRCULAR VALUES UI ================= */
+
+#our-values-circular {
+    padding: 60px 0 !important;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.values-orbit-wrapper {
+    position: relative;
+    width: 600px; /* Adjust this to make the circle bigger/smaller */
+    height: 600px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Central Hub Styling */
+.values-hub {
+    width: 160px;
+    height: 160px;
+    background: #0A1D37;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.4rem;
+    line-height: 1.2;
+    z-index: 10;
+    box-shadow: 0 0 0 15px rgba(10, 29, 55, 0.05);
+    border: 5px solid #fff;
+}
+
+/* Individual Value Items */
+.value-item {
+    position: absolute;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: #f4f8fb;
+    color: #0A1D37;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border: 1px solid #eef2f6;
+    transition: 0.3s;
+}
+
+.value-text h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #0A1D37;
+    margin-bottom: 5px;
+}
+
+.value-text p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* --- MANUAL POSITIONING (The Circle) --- */
+
+/* Top Center */
+.v1 { top: -40px; left: 50%; transform: translateX(-50%); }
+
+/* Right Middle */
+.v2 { top: 150px; right: -120px; }
+
+/* Bottom Right */
+.v3 { bottom: -20px; right: -20px; }
+
+/* Bottom Left */
+.v4 { bottom: -20px; left: -20px; }
+
+/* Left Middle */
+.v5 { top: 150px; left: -120px; }
+
+/* Hover Effects */
+.value-item:hover .value-icon {
+    background: #0A1D37;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.value-item:hover .value-text h4 {
+    color: #3B91D0; /* Light Blue highlight */
+}
+
+/* Responsive: Change to List on Mobile */
+@media (max-width: 991px) {
+    .values-orbit-wrapper {
+        height: auto;
+        width: 100%;
+        display: block;
+        margin: 40px 0;
+    }
+    .values-hub { display: none; } /* Hide hub on mobile */
+    .value-item {
+        position: static;
+        width: 100%;
+        transform: none !important;
+        margin-bottom: 30px;
+        flex-direction: row;
+        text-align: left;
+    }
+    .value-icon { margin-right: 20px; margin-bottom: 0; flex-shrink: 0; }
+}
+/* ================= CIRCULAR VALUES UI ================= */
+/* ================= IMPACT & REACH STATS SECTION ================= */
+
+/* Grid Container */
+.health-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important; /* 4 columns for desktop */
+    gap: 25px !important;
+    margin: 50px 0 !important;
+}
+
+/* Individual Stat Card */
+.health-stat-card {
+    background: #f8fafc !important; /* Light clinical gray/blue */
+    padding: 40px 20px !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    border: 1px solid #eef2f6 !important;
+    transition: all 0.3s ease !important;
+}
+
+/* Icon Styling */
+.health-stat-card i {
+    font-size: 2.5rem !important;
+    color: #3B91D0 !important; /* DBM Light Blue */
+    margin-bottom: 20px !important;
+    display: inline-block !important;
+}
+
+/* Number Styling (50+, 2000+, etc.) */
+.health-stat-card .stat-number {
+    display: block !important;
+    font-size: 3.2rem !important;
+    font-weight: 900 !important;
+    color: #0A1D37 !important; /* DBM Navy Blue */
+    line-height: 1 !important;
+    margin-bottom: 10px !important;
+}
+
+/* Label Styling (Villages Adopted, etc.) */
+.health-stat-card .stat-label {
+    display: block !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* Hover Effect */
+.health-stat-card:hover {
+    transform: translateY(-10px) !important;
+    background: #ffffff !important;
+    box-shadow: 0 15px 35px rgba(10, 29, 55, 0.08) !important;
+    border-color: #0A1D37 !important;
+}
+
+/* Responsive Logic */
+@media (max-width: 1024px) {
+    .health-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .health-stats-grid {
+        grid-template-columns: 1fr !important; /* 1 column on mobile */
+        gap: 20px !important;
+    }
+    .health-stat-card .stat-number {
+        font-size: 2.5rem !important;
+    }
+}
+#impact-stats-section {
+    padding: 80px 0 !important;
+    background-color: #ffffff;
+}
+
+/* Section Title Styling */
+#impact-stats-section .main-title {
+    font-size: 42px !important;
+    font-weight: 900 !important;
+    color: #0A1D37 !important; /* DBM Navy */
+    margin-bottom: 10px !important;
+}
+
+/* 4-Column Grid Layout */
+.health-stats-grid {
+    display: grid !important;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 25px !important;
+    margin-top: 60px !important;
+}
+
+/* Individual Stat Card */
+.health-stat-card {
+    background: #f8fafc !important; /* Very light clinical gray */
+    padding: 45px 25px !important;
+    border-radius: 20px !important;
+    text-align: center !important;
+    border: 1px solid #eef2f6 !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon Styling */
+.health-stat-card i {
+    font-size: 2.5rem !important;
+    color: #3B91D0 !important; /* DBM Light Blue */
+    margin-bottom: 25px !important;
+    transition: 0.3s ease;
+}
+
+/* Number Styling (50+, 2,000+) */
+.health-stat-card .stat-number {
+    display: block !important;
+    font-size: 3.4rem !important;
+    font-weight: 900 !important;
+    color: #0A1D37 !important;
+    line-height: 1 !important;
+    margin-bottom: 12px !important;
+    letter-spacing: -1px;
+}
+
+/* Label Styling (Villages Adopted) */
+.health-stat-card .stat-label {
+    display: block !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #64748b !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+/* --- HOVER EFFECTS --- */
+
+.health-stat-card:hover {
+    transform: translateY(-12px) !important;
+    background: #ffffff !important;
+    box-shadow: 0 20px 40px rgba(10, 29, 55, 0.1) !important;
+    border-color: #3B91D0 !important;
+}
+
+.health-stat-card:hover i {
+    color: #0A1D37 !important; /* Icon turns Navy on hover */
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets (iPad/Portrait) */
+@media (max-width: 1024px) {
+    .health-stats-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+    .health-stat-card {
+        padding: 35px 20px !important;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 600px) {
+    .health-stats-grid {
+        grid-template-columns: 1fr !important; /* Single column stack */
+        margin-top: 40px !important;
+    }
+    .health-stat-card .stat-number {
+        font-size: 2.8rem !important;
+    }
+    #impact-stats-section .main-title {
+        font-size: 32px !important;
+    }
+}
+/* ================= IMPACT & REACH SECTION ================= */
+/* ================= WORK WITH US UI ================= */
+
+#work-with-us-page {
+    padding: 60px 0 !important;
+    background-color: #fbfcfd;
+}
+
+/* Matching the "Implementation" Header */
+#work-with-us-page .long-subtitle {
+    max-width: 1000px !important;
+    margin-bottom: 80px !important;
+    font-size: 1.1rem !important;
+}
+
+.work-options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.work-card {
+    background: #ffffff;
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid #eef2f6;
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.work-icon-box {
+    width: 80px;
+    height: 80px;
+    background: #0A1D37;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 25px;
+}
+
+.work-card h3 {
+    font-size: 1.8rem;
+    color: #0A1D37;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.work-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Action Boxes inside Cards */
+.contact-info-box {
+    background: #f0f4f8;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.email-link, .phone-link {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #3B91D0; /* DBM Light Blue */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.email-link:hover, .phone-link:hover {
+    color: #0A1D37;
+    letter-spacing: 0.5px;
+}
+
+/* Dark Footer Banner */
+.cta-banner-dark {
+    background: linear-gradient(135deg, #0A1D37 0%, #1D5F85 100%);
+    padding: 60px;
+    border-radius: 25px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta-banner-dark h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.cta-banner-dark p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Hover Effect */
+.work-card:hover {
+    transform: translateY(-10px);
+    border-color: #3B91D0;
+    box-shadow: 0 20px 45px rgba(10, 29, 55, 0.08);
+}
+
+/* Responsive */
+@media (max-width: 850px) {
+    .work-options-grid { grid-template-columns: 1fr; }
+    .work-card { padding: 30px; }
+}
+/* ================= WHY DBM POINT-WISE UI ================= */
+
+#why-dbm-points {
+    padding: 20px 0 !important;
+    background-color: #ffffff;
+}
+
+.vision-points-wrapper {
+    max-width: 1350px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.vision-point-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 30px;
+    background: #f8fafc;
+    border-radius: 15px;
+    border-left: 6px solid #0A1D37; /* DBM Navy */
+    transition: 0.3s ease;
+}
+
+.vision-point-item:hover {
+    transform: translateX(10px);
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(10, 29, 55, 0.05);
+    border-left-color: #3B91D0; /* DBM Light Blue on hover */
+}
+
+.point-number {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: #3B91D0; /* DBM Light Blue */
+    opacity: 0.5;
+    line-height: 1;
+}
+
+.point-content p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+}
+
+/* Specific styling for the first point to stand out */
+.vision-point-item:first-child p {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0A1D37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .vision-point-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 25px;
+    }
+    .point-number {
+        font-size: 1.4rem;
+    }
+}
+/* ================= WORK WITH US UI ================= */
+/* ================= DONATION SECTION UI ================= */
+
+#donation-page {
+    padding: 80px 0 !important;
+    background-color: #fbfcfd;
+}
+
+/* THE IMPORTANT ALERT BOX */
+.donation-alert-box {
+    background: #fff4e5; /* Warm warning background */
+    border-left: 6px solid #e67e22; /* Professional Orange */
+    padding: 35px;
+    border-radius: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(230, 126, 34, 0.1);
+}
+
+.alert-icon i {
+    font-size: 2.5rem;
+    color: #e67e22;
+}
+
+.alert-text h3 {
+    color: #0A1D37;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.alert-text p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Link inside the alert box */
+.form-link-inline {
+    display: inline-block;
+    color: #3B91D0; /* DBM Light Blue */
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.form-link-inline:hover {
+    color: #0A1D37;
+    text-decoration: none;
+}
+
+/* DONATION GRID */
+.donation-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.donation-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 25px;
+    border: 1px solid #eef2f6;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.03);
+    transition: 0.3s ease;
+}
+
+.donation-card:hover {
+    transform: translateY(-5px);
+    border-color: #3B91D0;
+}
+
+.card-header i {
+    font-size: 2.2rem;
+    color: #0A1D37;
+    margin-bottom: 15px;
+}
+
+.card-header h4 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #0A1D37;
+    margin-bottom: 20px;
+}
+
+/* Image Handling */
+.donation-img-wrapper {
+    width: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #f1f1f1;
+}
+
+.donation-img-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-caption {
+    margin-top: 15px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 850px) {
+    .donation-alert-box {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+    }
+    .donation-grid {
+        grid-template-columns: 1fr;
+    }
+    .alert-icon {
+        margin: 0 auto;
     }
 }

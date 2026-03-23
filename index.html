@@ -28,152 +28,148 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpeg">
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-<header class="main-header">
-  <div class="header-container">
+  <!-- ================= HEADER ================= -->
+  <header class="main-header">
+    <div class="header-container">
 
-    <!-- LOGO -->
-    <div class="logo-area">
-        <img src="img/favicon.jpeg" alt="DBM Foundation">
-        <span class="logo-text"></span>
+      <!-- LOGO -->
+      <div class="logo-area">
+          <img src="img/favicon.jpeg" alt="DBM Foundation">
+          <span class="logo-text"></span>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul class="nav-menu">
+
+          <li class="dropdown">
+            <a href="index.html">About Us ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="#vision">Our Vision</a></li>
+              <li><a href="our values.html">Our Values</a></li>
+              <li><a href="our team.html">Our Team</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Our Work ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Public Health.html">Public Health</a></li>
+              <li><a href="Skill Development.html">Skill Development</a></li>
+              <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+              <li><a href="Implementation Model.html">Implementation Model</a></li>
+            </ul>
+          </li>
+
+          <li><a href="impact and reach.html">Impact and Reach</a></li>
+
+          <li class="dropdown">
+            <a href="#">Get Involved ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Donation.html">Donation</a></li>
+              <li><a href="work-with us.html">Work With Us</a></li>
+            </ul>
+          </li>
+
+          <li><a href="partners.html">Partners</a></li>
+          <li><a class="donate-btn" href="contact.html">Contact Us</a></li>
+
+        </ul>
+      </nav>
+
+      <!-- HAMBURGER MENU FOR MOBILE -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
+  </header>
 
-    <!-- NAVIGATION -->
-    <nav>
-      <ul class="nav-menu">
+  <!-- MOBILE FULL SCREEN MENU -->
+  <div class="mobile-menu" id="mobileMenu">
 
-        <li class="dropdown">
-          <a href="index.html">About Us ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="our vision.html">Our Vision</a></li>
-            <li><a href="our values.html">Our Values</a></li>
-            <li><a href="our team.html">Our Team</a></li>
-            <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-            <li><a href="annual reports.html">Annual Reports</a></li>
-          </ul>
-        </li>
+      <!-- BACK BUTTON -->
+      <div class="menu-back" id="menuBack">
+          <i class="fa fa-arrow-left"></i> Back
+      </div>
 
-        <li class="dropdown">
-          <a href="#">Our Work ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Public Health.html">Public Health</a></li>
-            <li><a href="Skill Development.html">Skill Development</a></li>
-            <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-            <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-          </ul>
-        </li>
+      <ul class="mobile-nav">
 
-        <li><a href="impact and reach.html">Impact and Reach</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  About Us <i class="fa fa-chevron-down"></i>
+              </div>
 
-        <li class="dropdown">
-          <a href="#">Get Involved ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Donation.html">Donation</a></li>
-            <li><a href="work-with us.html">Work With Us</a></li>
-          </ul>
-        </li>
+              <ul class="m-submenu">
+                  <li><a href="#vision">Our Vision</a></li>
+                  <li><a href="our values.html">Our Values</a></li>
+                  <li><a href="our team.html">Our Team</a></li>
+              </ul>
+          </li>
 
-        <li><a href="partners.html">Partners</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a class="donate-btn" href="donate.html">Donate</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Our Work <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Public Health.html">Public Health</a></li>
+                  <li><a href="Skill Development.html">Skill Development</a></li>
+                  <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+                  <li><a href="Implementation Model.html">Implementation Model</a></li>
+              </ul>
+          </li>
+
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Get Involved <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Donation.html">Donation</a></li>
+                  <li><a href="work-with us.html">Work With Us</a></li>
+              </ul>
+          </li>
+
+          <li>
+              <a href="impact and reach.html" class="m-link">Impact & Reach</a>
+          </li>
+
+          <li>
+              <a href="partners.html" class="m-link">Partners</a>
+          </li>
+
+          <li>
+              <a href="contact.html" class="m-link">Contact Us</a>
+          </li>
 
       </ul>
-    </nav>
 
-    <!-- HAMBURGER MENU FOR MOBILE -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <a href="Donation.html" class="newsletter-btn">
+          Donate Now →
+      </a>
 
   </div>
-</header>
-
-<!-- MOBILE FULL SCREEN MENU -->
-<div class="mobile-menu" id="mobileMenu">
-
-    <!-- BACK BUTTON -->
-    <div class="menu-back" id="menuBack">
-        <i class="fa fa-arrow-left"></i> Back
-    </div>
-
-    <ul class="mobile-nav">
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                About Us <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="our vision.html">Our Vision</a></li>
-                <li><a href="our values.html">Our Values</a></li>
-                <li><a href="our team.html">Our Team</a></li>
-                <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-                <li><a href="annual reports.html">Annual Reports</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Our Work <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Public Health.html">Public Health</a></li>
-                <li><a href="Skill Development.html">Skill Development</a></li>
-                <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-                <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Get Involved <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Donation.html">Donation</a></li>
-                <li><a href="work-with us.html">Work With Us</a></li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="impact and reach.html" class="m-link">Impact & Reach</a>
-        </li>
-
-        <li>
-            <a href="partners.html" class="m-link">Partners</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="m-link">Contact Us</a>
-        </li>
-
-    </ul>
-
-    <a href="Donation.html" class="newsletter-btn">
-        Donate Now →
-    </a>
-
-</div>
 
 
 <!-- ================= HERO SECTION ================= -->
-<section class="hero-section">
-  <div class="hero-overlay"></div>
+  <section class="hero-section">
+    <div class="hero-overlay"></div>
 
-  <div class="hero-content">
-    <h1>
-      Working towards ensuring quality school education  
-      <br>for all children in India
-    </h1>
-  </div>
-</section>
+    <div class="hero-content">
+      <h1>
+        Working towards enhancing local knowledge,
+        <br>skills, and action to address challenges faced by communities, and disadvantaged groups
+      </h1>
+    </div>
+  </section>
 <!-- ================= HERO END ================= -->
 
 
@@ -182,249 +178,286 @@
 
   <!-- YOU CAN ADD SECTIONS HERE -->
   <!-- Example Section -->
-
-<section class="focus-section">
+<section class="dbm-about-section">
   <div class="container">
-    <h2 class="section-title">Our Focus Areas</h2>
-    <p class="section-subtitle">
-      Driving long-term impact through health, skills, livelihoods, and sustainability
-    </p>
-
-    <div class="focus-grid">
-
-      <div class="focus-card">
-        <div class="focus-icon">🩺</div>
-        <h3>Public Health Programs</h3>
-        <p>
-          Strengthening community health through preventive care, awareness
-          campaigns, and accessible healthcare services.
-        </p>
-        <a href="Public Health.html" class="focus-btn">Read More</a>
-      </div>
-
-      <div class="focus-card">
-        <div class="focus-icon">🛠️</div>
-        <h3>Skill Development</h3>
-        <p>
-          Empowering youth and adults with practical skills to improve employability
-          and career opportunities.
-        </p>
-        <a href="Skill Development.html" class="focus-btn">Read More</a>
-      </div>
-
-      <div class="focus-card">
-        <div class="focus-icon">💼</div>
-        <h3>Livelihood Opportunities</h3>
-        <p>
-          Supporting income generation and entrepreneurship to promote
-          financial independence and dignity.
-        </p>
-        <a href="Livelihood Opportunities.html" class="focus-btn">Read More</a>
-      </div>
-
-      <div class="focus-card">
-        <div class="focus-icon">🌱</div>
-        <h3>Sustainable Agriculture</h3>
-        <p>
-          Encouraging eco-friendly farming practices that ensure food security
-          and environmental balance.
-        </p>
-        <a href="Sustainable Agriculture.html" class="focus-btn">Read More</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="vision-mission-section">
-  <div class="container vm-container">
-    
-    <div class="vm-image-col">
-      <div class="vm-img-wrapper">
-        <img src="img/gov-partnerships.jpg" alt="Healthcare Worker">
-        <div class="play-icon">▶</div>
-      </div>
-    </div>
-
-    <div class="vm-content-col">
+    <div class="about-grid">
       
-      <div class="vm-card">
-        <div class="vm-icon">✔</div>
-        <div class="vm-text">
-          <h3>The Vision</h3>
-          <p>To improve the quality of life through restoration of sight and by creating livelihood opportunities.</p>
-          <a href="our vision.html" class="vm-btn-small">Read More ➝</a>
+      <div class="about-visuals">
+        <div class="scene-3d">
+          <div class="depth-shape"></div>
+          
+          <div class="image-layer layer-1">
+            <img src="img/about-1.jpg" alt="Community Support">
+          </div>
+          
+          <div class="image-layer layer-2">
+            <img src="img/about-2.jpeg" alt="Healthcare Program">
+          </div>
         </div>
       </div>
 
-      <div class="vm-card">
-        <div class="vm-icon">✔</div>
-        <div class="vm-text">
-          <h3>The Mission</h3>
-          <p>To bring free and affordable healthcare to the doorstep of the poor, tribal, and aged through committed service.</p>
-          <a href="our vision.html" class="vm-btn-small">Read More ➝</a>
+      <div class="about-content">
+        <div class="brand-line">
+          <span class="dot"></span>
+          <span class="label">SINCE 2012</span>
         </div>
-      </div>
+        
+        <h2 class="main-title">About Doctors Beyond Medicine <br><span class="logo-text">(DBM) Foundation</span></h2>
+        
+        <div class="description">
+          <p class="highlight">
+            Social problems are complex. Just as a doctor prescribes medicines to heal a patient, the Doctors Beyond Medicine Foundation, a registered section 8 non-profit company, brings together development practitioners who collaborate with corporates, communities, and governments—enhancing knowledge, skills, and action to address challenges faced by children, girls, tribal communities, the poor, and disadvantaged groups.
+          </p>
+          
+          <p>
+            The Foundation recognises that many social challenges cannot be addressed through a single-sector approach. <strong>Health, education, and livelihood</strong> opportunities are closely interconnected and together influence the quality of life of individuals and communities.
+          </p>
 
-      <div class="vm-card">
-        <div class="vm-icon">✔</div>
-        <div class="vm-text">
-          <h3>Objectives</h3>
-          <p>1,00,000 Free Cataract Surgeries Annually: Restoring Vision and Transforming Lives for underserved communities.</p>
-          <a href="objectives.html" class="vm-btn-small">Read More ➝</a>
+          <p>
+            We work to address these challenges by promoting collaborative action in building skills, preventive health care, and sustainable livelihood opportunities. By making the workforce future-ready and promoting environmental practices, we deliver not just solutions, but pathways to lasting well-being.
+          </p>
         </div>
-      </div>
 
-    </div>
-
-  </div>
-</section>
-<section class="impact-section">
-  <div class="impact-overlay"></div>
-  <div class="container impact-content">
-    <div class="impact-grid">
-      
-      <div class="impact-item">
-        <div class="impact-number">50+</div>
-        <p>Villages Adopted</p>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-number">12,000+</div>
-        <p>Children Educated</p>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-number">850+</div>
-        <p>Healthcare Camps</p>
-      </div>
-
-      <div class="impact-item">
-        <div class="impact-number">25+</div>
-        <p>Corporate Partners</p>
+        <div class="target-groups">
+          <span>Children</span>
+          <span>Girls</span>
+          <span>Tribal Communities</span>
+          <span>Disadvantaged Groups</span>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-<section class="clinical-section">
+<section class="dbm-vision-mission" id="vision">
+    <div class="dbm-grid">
+        
+        <div class="dbm-image-container">
+            <img src="img/gov-partnerships.jpg" alt="DBM Service" class="dbm-img">
+        </div>
+
+        <div class="dbm-card-stack">
+            
+            <div class="dbm-card">
+                <div class="dbm-check">✔</div>
+                <div class="dbm-content">
+                    <h3>The Vision</h3>
+                    <p>To build resilient, future ready communities where health, education, livelihoods, and sustainability converge guided by knowledge, strengthened by skills, and enriched by heritage</p>
+                </div>
+            </div>
+
+            <div class="dbm-card dbm-active">
+                <div class="dbm-check">✔</div>
+                <div class="dbm-content">
+                    <h3>The Mission</h3>
+                    <p>Empower communities to learn, to heal, to honour heritage, and to grow sustainably so that every skill, every tradition, and every harvest strengthens society</p>
+                </div>
+            </div>
+
+            <div class="dbm-card">
+                <div class="dbm-check">✔</div>
+                <div class="dbm-content">
+                    <h3>Objectives</h3>
+                    <p>The Foundation strives to build resilient, future-ready societies by promoting preventive health practices, enhancing learning and employability, and enabling inclusive economic opportunities—ensuring that individuals and communities can lead healthy, dignified, and sustainable lives.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+  <section class="focus-section">
   <div class="container">
-    
-    <div class="section-header">
-      <h2>Advanced Clinical Services</h2>
-      <p>Providing comprehensive eye care through state-of-the-art diagnostic and therapeutic techniques.</p>
+    <div class="header-group">
+      <h2 class="section-title">Our Focus Areas</h2>
+      <div class="dbm-dots">
+        <span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+      <p class="section-subtitle">
+        The Foundation designs and delivers initiatives that foster skills, advance public health, honour indigenous knowledge, and promote sustainable agriculture—building resilient, future-ready communities where education, livelihoods, and health converge..
+      </p>
     </div>
 
-    <div class="clinical-grid">
-
-      <div class="clinical-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-glasses"></i>
+    <div class="focus-3d-stack">
+      <div class="card-3d deep-blue">
+        <div class="card-inner">
+          <div class="card-icon">🩺</div>
+          <div class="card-text">
+            <h3>1. Public Health Programme</h3>
+            <p>We promote preventive health awareness, screenings, education, and early intervention empowering communities with reliable information and practices that support long-term well being</p>
+          </div>
+          <a href="Public Health.html" class="btn-3d">Read More</a>
         </div>
-        <h3>Eye Examination & Refraction</h3>
-        <p>Precise assessment of visual acuity and refractive errors to prescribe the most accurate corrective lenses for clear vision.</p>
       </div>
 
-      <div class="clinical-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-user-doctor"></i>
+      <div class="card-3d mid-blue">
+        <div class="card-inner">
+          <div class="card-icon">🛠️</div>
+          <div class="card-text">
+            <h3>2. Skill Development</h3>
+            <p>We build future-ready communities by strengthening skills, honouring indigenous knowledge, and transforming field practices. The Foundation strengthens learning approaches that promote school to work transitions and nurture future ready skills, enabling individuals to engage effectively with their communities and contribute to collective well being.</p>
+          </div>
+          <a href="Skill Development.html" class="btn-3d">Read More</a>
         </div>
-        <h3>Clinical Optometry Techniques</h3>
-        <p>Application of advanced clinical methods to diagnose, manage, and treat various ocular disorders and vision anomalies.</p>
       </div>
 
-      <div class="clinical-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-hand-holding-heart"></i>
+      <div class="card-3d light-blue">
+        <div class="card-inner">
+          <div class="card-icon">💼</div>
+          <div class="card-text">
+            <h3>3. Livelihood & Sustainable Agriculture</h3>
+            <p>3. Livelihood & Sustainable AgricultureAccess to sustainable livelihood opportunities is critical for strengthening economic security and social resilience.The Foundation works to strengthen livelihood opportunities by supporting sustainable agriculture practices, entrepreneurship, and community based economic initiatives, .</p>
+          </div>
+          <a href="Livelihood Opportunities.html" class="btn-3d">Read More</a>
         </div>
-        <h3>Patient Counseling & Care</h3>
-        <p>Compassionate guidance and education to help patients understand their eye health and manage treatment plans effectively.</p>
       </div>
-
-      <div class="clinical-card">
-        <div class="icon-box">
-          <i class="fa-solid fa-microscope"></i>
-        </div>
-        <h3>Advanced Diagnostics</h3>
-        <p class="small-text">Slit Lamp Examination, Retinoscopy, Diagnostic procedures, and Tonometry for comprehensive eye health evaluation.</p>
-      </div>
-
-    </div>
-  </div>
 </section>
-<section class="cta-section">
-  <div class="container cta-container">
-    <div class="cta-text">
-      <h2>Join us in making a difference today</h2>
-      <p>Your contribution can change a life. Volunteer your time or donate to support our cause.</p>
-    </div>
-    <div class="cta-buttons">
-      <a href="volunteer.html" class="btn-outline">Become a Volunteer</a>
-      <a href="donate.html" class="btn-filled">Donate Now</a>
-    </div>
-  </div>
-</section>
+<section id="core-domains-index" class="dbm-skill-page reveal-up">
+    <div class="container-manual">
+        
+        <div class="section-header text-center">
+            <h2 class="main-title">Our Implementation Model</h2>
+            <div class="logo-dots centered">
+                <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+                <span class="dot d4"></span><span class="dot d5"></span><span class="dot d6"></span>
+            </div>
+            <p class="long-subtitle">
+                Doctors Beyond Medicine Foundation adopts a structured implementation approach that connects <strong> engagement, institutional strengthening, and knowledge systems</strong> to ensure that programmes lead to practical and sustainable outcomes.The Foundation works through three complementary levels of engagement
+            </p>
+        </div>
 
-  <!-- ADD MORE SECTIONS BELOW -->
-  <!-- <section>...</section> -->
+        <div class="manual-grid">
+            <div class="manual-card">
+                <div class="icon-circle"><i class="fa-solid fa-users-viewfinder"></i></div>
+                <h3>Community Level Engagement</h3>
+                <p>At the community level, the Foundation focuses on strengthening awareness, skills, and local participation.</p>
+                <a href="Implementation Model.html#Community-Engagement" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="manual-card">
+                <div class="icon-circle"><i class="fa-solid fa-handshake-angle"></i></div>
+                <h3>Institutional Partnerships</h3>
+                <p>Recognising that sustainable change requires strong institutions,the Foundation works closely with government</p>
+                <a href="Implementation Model.html#institutional-partnerships" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="manual-card">
+                <div class="icon-circle"><i class="fa-solid fa-tower-broadcast"></i></div>
+                <h3>Knowledge and Communication Systems</h3>
+                <p>A key component of the Foundation’s work is strengthening knowledge dissemination and development communication</p>
+                <a href="Implementation Model.html#knowledge-systems" class="read-more-link">Read More</a>
+            </div>
+
+            <div class="manual-card">
+                <div class="icon-circle"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Approach to Sustainability</h3>
+                <p>Across all programmes, the Foundation prioritises approaches that build local capacity, institutional ownership</p>
+                <a href="Implementation Model.html#Approach-Sustainability" class="read-more-link">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+  <section class="impact-section">
+    <div class="impact-overlay"></div>
+    <div class="container impact-content">
+      <div class="impact-grid">
+        
+        <div class="impact-item">
+          <div class="impact-number">50+</div>
+          <p>Villages Adopted</p>
+        </div>
+
+        <div class="impact-item">  
+          <div class="impact-number">2,000+</div>
+          <p>Children Educated</p>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-number">40+</div>
+          <p>Healthcare Camps</p>
+        </div>
+
+        <div class="impact-item">
+          <div class="impact-number">2+</div>
+          <p>Corporate Partners</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="cta-section">
+    <div class="container cta-container">
+      <div class="cta-text">
+        <h2>Join us in making a difference today</h2>
+        <p>Your contribution can change a life. Volunteer your time or donate to support our cause.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="volunteer.html" class="btn-outline">Become a Volunteer</a>
+        <a href="donate.html" class="btn-filled">Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+    <!-- ADD MORE SECTIONS BELOW -->
+    <!-- <section>...</section> -->
 
 </main>
 <!-- ================= MAIN CONTENT END ================= -->
 
 
-<footer>
+  <footer>
 
-  <div class="footer-top">
+    <div class="footer-top">
 
-    <div class="footer-col">
-      <a href="index.html">
-        <img src="img/favicon.jpeg" alt="DBM Foundation" class="footer-logo">
-      </a>
-      <p>
-        Working towards ensuring quality education, healthcare, and sustainable
-        livelihoods for underserved communities across India.
-      </p>
+      <div class="footer-col">
+        <a href="index.html">
+          <img src="img/favicon.jpeg" alt="DBM Foundation" class="footer-logo">
+        </a>
+        <p>
+          Working towards ensuring quality education, healthcare, and sustainable
+          livelihoods for underserved communities across India.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="our values.html">Our Values</a>
+        <a href="our team.html">Our Team</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Our Work</h4>
+        <a href="partners.html">Public Health</a>
+        <a href="Skill Development.html">Skill Development</a>
+        <a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a>
+        <a href="Implementation Model.html">Implementation Model</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <p>Email: info@dbmfoundation.org</p>
+        <p>Phone: +91 9XXXXXXXXX</p>
+        <a href="contact.html" class="contact-btn">Contact Us</a>
+      </div>
+
     </div>
 
-    <div class="footer-col">
-      <h4>Quick Links</h4>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="work.html">Our Work</a>
-      <a href="contact.html">Contact</a>
+    <div class="footer-social">
+      <div class="icons">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
     </div>
 
-    <div class="footer-col">
-      <h4>Our Work</h4>
-      <a href="public-health.html">Public Health</a>
-      <a href="skill-development.html">Skill Development</a>
-      <a href="livelihood.html">Livelihood Opportunities</a>
-      <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+    <div class="footer-bottom">
+      © 2026 DBM Foundation. All Rights Reserved.
     </div>
 
-    <div class="footer-col">
-      <h4>Get in Touch</h4>
-      <p>Email: info@dbmfoundation.org</p>
-      <p>Phone: +91 9XXXXXXXXX</p>
-      <a href="contact.html" class="contact-btn">Contact Us</a>
-    </div>
-
-  </div>
-
-  <div class="footer-social">
-    <div class="icons">
-      <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-      <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
-      <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-      <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    © 2026 DBM Foundation. All Rights Reserved.
-  </div>
-
-</footer>
-<script src="js/script.js"></script>
+  </footer>
+  <script src="js/script.js"></script>
 
 </body>
 </html>

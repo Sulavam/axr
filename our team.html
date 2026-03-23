@@ -28,153 +28,147 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" type="image/jpeg" href="img/favicon.jpeg">
 </head>
 
 <body>
 
 <!-- ================= HEADER ================= -->
-<header class="main-header">
-  <div class="header-container">
+  <header class="main-header">
+    <div class="header-container">
 
-    <!-- LOGO -->
-    <div class="logo-area">
-        <img src="img/favicon.jpeg" alt="DBM Foundation">
-        <span class="logo-text"></span>
+      <!-- LOGO -->
+      <div class="logo-area">
+          <img src="img/favicon.jpeg" alt="DBM Foundation">
+          <span class="logo-text"></span>
+      </div>
+
+      <!-- NAVIGATION -->
+      <nav>
+        <ul class="nav-menu">
+
+          <li class="dropdown">
+            <a href="index.html">About Us ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="index.html#vision">Our Vision</a></li>
+              <li><a href="our values.html">Our Values</a></li>
+              <li><a href="our team.html">Our Team</a></li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a href="#">Our Work ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Public Health.html">Public Health</a></li>
+              <li><a href="Skill Development.html">Skill Development</a></li>
+              <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+              <li><a href="Implementation Model.html">Implementation Model</a></li>
+            </ul>
+          </li>
+
+          <li><a href="impact and reach.html">Impact and Reach</a></li>
+
+          <li class="dropdown">
+            <a href="#">Get Involved ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="Donation.html">Donation</a></li>
+              <li><a href="work-with us.html">Work With Us</a></li>
+            </ul>
+          </li>
+
+          <li><a href="partners.html">Partners</a></li>
+          <li><a class="donate-btn" href="contact.html">Contact Us</a></li>
+
+        </ul>
+      </nav>
+
+      <!-- HAMBURGER MENU FOR MOBILE -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
     </div>
+  </header>
 
-    <!-- NAVIGATION -->
-    <nav>
-      <ul class="nav-menu">
+  <!-- MOBILE FULL SCREEN MENU -->
+  <div class="mobile-menu" id="mobileMenu">
 
-        <li class="dropdown">
-          <a href="index.html">About Us ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="our vision.html">Our Vision</a></li>
-            <li><a href="our values.html">Our Values</a></li>
-            <li><a href="our team.html">Our Team</a></li>
-            <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-            <li><a href="annual reports.html">Annual Reports</a></li>
-          </ul>
-        </li>
+      <!-- BACK BUTTON -->
+      <div class="menu-back" id="menuBack">
+          <i class="fa fa-arrow-left"></i> Back
+      </div>
 
-        <li class="dropdown">
-          <a href="#">Our Work ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Public Health.html">Public Health</a></li>
-            <li><a href="Skill Development.html">Skill Development</a></li>
-            <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-            <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-          </ul>
-        </li>
+      <ul class="mobile-nav">
 
-        <li><a href="impact and reach.html">Impact and Reach</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  About Us <i class="fa fa-chevron-down"></i>
+              </div>
 
-        <li class="dropdown">
-          <a href="#">Get Involved ▼</a>
-          <ul class="dropdown-menu">
-            <li><a href="Donation.html">Donation</a></li>
-            <li><a href="work-with us.html">Work With Us</a></li>
-          </ul>
-        </li>
+              <ul class="m-submenu">
+                  <li><a href="index.html#vision">Our Vision</a></li>
+                  <li><a href="our values.html">Our Values</a></li>
+                  <li><a href="our team.html">Our Team</a></li>i>
+              </ul>
+          </li>
 
-        <li><a href="partners.html">Partners</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-        <li><a class="donate-btn" href="donate.html">Donate</a></li>
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Our Work <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Public Health.html">Public Health</a></li>
+                  <li><a href="Skill Development.html">Skill Development</a></li>
+                  <li><a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a></li>
+                  <li><a href="Implementation Model.html">Implementation Model</a></li>
+              </ul>
+          </li>
+
+          <li class="m-dropdown">
+              <div class="m-link">
+                  Get Involved <i class="fa fa-chevron-down"></i>
+              </div>
+
+              <ul class="m-submenu">
+                  <li><a href="Donation.html">Donation</a></li>
+                  <li><a href="work-with us.html">Work With Us</a></li>
+              </ul>
+          </li>
+
+          <li>
+              <a href="impact and reach.html" class="m-link">Impact & Reach</a>
+          </li>
+
+          <li>
+              <a href="partners.html" class="m-link">Partners</a>
+          </li>
+
+          <li>
+              <a href="contact.html" class="m-link">Contact Us</a>
+          </li>
 
       </ul>
-    </nav>
 
-    <!-- HAMBURGER MENU FOR MOBILE -->
-    <div class="hamburger" id="hamburger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
+      <a href="Donation.html" class="newsletter-btn">
+          Donate Now →
+      </a>
 
   </div>
-</header>
 
-<!-- MOBILE FULL SCREEN MENU -->
-<div class="mobile-menu" id="mobileMenu">
-
-    <!-- BACK BUTTON -->
-    <div class="menu-back" id="menuBack">
-        <i class="fa fa-arrow-left"></i> Back
-    </div>
-
-    <ul class="mobile-nav">
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                About Us <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="our vision.html">Our Vision</a></li>
-                <li><a href="our values.html">Our Values</a></li>
-                <li><a href="our team.html">Our Team</a></li>
-                <li><a href="our partners and donors.html">Our Partners & Donors</a></li>
-                <li><a href="annual reports.html">Annual Reports</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Our Work <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Public Health.html">Public Health</a></li>
-                <li><a href="Skill Development.html">Skill Development</a></li>
-                <li><a href="Livelihood Opportunities.html">Livelihood Opportunities</a></li>
-                <li><a href="Sustainable Agriculture.html">Sustainable Agriculture</a></li>
-            </ul>
-        </li>
-
-        <li class="m-dropdown">
-            <div class="m-link">
-                Get Involved <i class="fa fa-chevron-down"></i>
-            </div>
-
-            <ul class="m-submenu">
-                <li><a href="Donation.html">Donation</a></li>
-                <li><a href="work-with us.html">Work With Us</a></li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="impact and reach.html" class="m-link">Impact & Reach</a>
-        </li>
-
-        <li>
-            <a href="partners.html" class="m-link">Partners</a>
-        </li>
-
-        <li>
-            <a href="contact.html" class="m-link">Contact Us</a>
-        </li>
-
-    </ul>
-
-    <a href="Donation.html" class="newsletter-btn">
-        Donate Now →
-    </a>
-
-</div>
 
 
 
 <!-- =================  About HERO SECTION ================= -->
-<section class="page-hero" style="background-image: url('img/team-hero.png');">
+<section class="page-hero" style="background-image: url('img/team-H.png');">
   
   <div class="hero-gradient"></div>
 
   <div class="container hero-content-small">
-    <h1>Our organization</h1>
-    <p>
-      From our Amsterdam headquarters Eye Care Foundation supports our international teams. 
-      We currently work in Vietnam, Nepal, Cambodia, Laos, Surinam, Ecuador and Tanzania. 
-      Further expansion of our work areas and collaborations with other organisations is part of our roadmap.
+    <h1>The People Behind Our Mission</h1>
+    <p>Driven by purpose and united by compassion, our team works tirelessly to bring meaningful change and support to the communities we serve.
     </p>
   </div>
 
@@ -187,66 +181,64 @@
 
   <!-- YOU CAN ADD SECTIONS HERE -->
   <!-- Example Section -->
-<section class="team-section">
-  <div class="container">
-    
-    <div class="section-header-center">
-      <h2>Our Team</h2>
-      <p>Meet the leaders driving our mission forward.</p>
+<section id="our-team-page" class="dbm-skill-page">
+    <div class="container-manual">
+        
+        <div class="section-header text-center">
+            <h2 class="main-title">Our Team</h2>
+            <div class="logo-dots centered">
+                <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+                <span class="dot d4"></span><span class="dot d5"></span><span class="dot d6"></span>
+            </div>
+            <p class="long-subtitle">
+                The team members bring experience from diverse sectors including education, development practice, programme implementation, and institutional partnerships. Their collective effort is guided by the belief that professional knowledge should extend beyond institutions and be applied in ways that address real challenges faced by communities Through the Foundation, they aim to contribute to initiatives that strengthen education systems, promote health awareness, and expand livelihood opportunities, particularly for communities that have limited access to resources and information.
+            </p>
+        </div>
+
+        <div class="team-list">
+            
+            <div class="team-card-horizontal card-navy reveal-up">
+                <div class="horizontal-img">
+                    <img src="img/team-samar.jpg" alt="Team Member">
+                </div>
+                <div class="horizontal-info">
+                    <h3>Mr. Samar Mahapatro <span class="role-text">— Social Entrepreneur & Leader</span></h3>
+                    <p>Samar Mahapatro is a dynamic social entrepreneur and business leader committed to scalable social impact and sustainable enterprise. With over 15 years of experience spanning finance, operations, and social innovation, Samar has been instrumental in driving results-oriented change across healthcare, technology, and community development sectors.</p>
+                </div>
+            </div>
+
+            <div class="team-card-horizontal card-royal reveal-up">
+                <div class="horizontal-img">
+                    <img src="img/team-amarjit.jpg" alt="Team Member">
+                </div>
+                <div class="horizontal-info">
+                    <h3>Shri Amarjit Jena <span class="role-text">— Programme Implementation</span></h3>
+                    <p>Shri Amarjit Jena is a development professional with extensive experience in strengthening public systems, particularly in the field of education and skill developmentHe previously served as the Chief Executive Officer of Mo School Abhiyan, an initiative of the Government of Odisha aimed at revitalising public education through community, corporate and alumni engagement. During his tenure, he contributed to strengthening partnerships between schools, communities, corporate and institutional stakeholdersHe has also worked with UNICEF as Education Officer and Magic Bus India Foundation as Director-Government Partnerships, where he supported programmes focused on youth development, life skills education, and employabilityCurrently associated with Central Square Foundation, Shri Jena continues to contribute to initiatives that strengthen learning and innovationHis work reflects a strong commitment to strengthening public institutions and ensuring that development initiatives translate into measurable improvements in people’s lives.</p>
+                </div>
+            </div>
+
+            <div class="team-card-horizontal card-mid reveal-up">
+                <div class="horizontal-img">
+                    <img src="img/team-akhilesh.jpg" alt="Team Member">
+                </div>
+                <div class="horizontal-info">
+                    <h3>Mr. Akhilesh Parida <span class="role-text">— Entrepreneur & Social Impact Leader</span></h3>
+                    <p>Akhilesh Parida is an entrepreneur and social impact leader with over two decades of experience across engineering, hospitality, live events, energy logistics, and infrastructure services. He is the CEO & Managing Partner of Utkal Hospitality Services, Founder of InterXcel LLP, and Additional Director at Doctors Beyond Medicine Foundation.</p>
+                </div>
+            </div>
+
+            <div class="team-card-horizontal card-sky reveal-up">
+                <div class="horizontal-img">
+                    <img src="img/team-anita.jpg" alt="Team Member">
+                </div>
+                <div class="horizontal-info">
+                    <h3>Ms. Anita <span class="role-text">— Social Development Professional</span></h3>
+                    <p>Anita is a Social Development Professional experienced in Government and Corporate Partnerships, with a strong foundation in social work (DSSW) and experience as a Public Health Trainer. She works at the intersection of program execution, stakeholder coordination, and community impact. She is also an aspirant Clinical Psychologist.</p>
+                </div>
+            </div>
+
+        </div>
     </div>
-
-    <div class="team-list">
-
-      <div class="team-card-horizontal card-blue">
-        <div class="horizontal-img">
-          <img src="img/team-samar.jpg" alt="Samar Mahapatro">
-        </div>
-        <div class="horizontal-info">
-          <h3>Mr. Samar Mahapatro – <span class="role-text">Social Entrepreneur & Leader</span></h3>
-          <p>
-            Samar Mahapatro is a dynamic social entrepreneur and business leader committed to scalable social impact and sustainable enterprise. With over 15 years of experience spanning finance, operations, and social innovation, Samar has been instrumental in driving results-oriented change across healthcare, technology, and community development sectors.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-card-horizontal card-green">
-        <div class="horizontal-img">
-          <img src="img/team-amarjit.jpg" alt="Amarjit Jena">
-        </div>
-        <div class="horizontal-info">
-          <h3>Mr. Amarjit Jena – <span class="role-text">Team Member</span></h3>
-          <p>
-            A dedicated professional committed to the foundation's goals, bringing expertise and passion to support our community initiatives and operational success.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-card-horizontal card-yellow">
-        <div class="horizontal-img">
-          <img src="img/team-akhilesh.jpg" alt="Akhilesh Parida">
-        </div>
-        <div class="horizontal-info">
-          <h3>Mr. Akhilesh Parida – <span class="role-text">Entrepreneur & Social Impact Leader</span></h3>
-          <p>
-            Akhilesh Parida is an entrepreneur and social impact leader with over two decades of experience across engineering, hospitality, live events, energy logistics, and infrastructure services. He is the CEO & Managing Partner of Utkal Hospitality Services, Founder of InterXcel LLP, and Additional Director at Doctors Beyond Medicine Foundation.
-          </p>
-        </div>
-      </div>
-
-      <div class="team-card-horizontal card-pink">
-        <div class="horizontal-img">
-          <img src="img/team-anita.jpg" alt="Ms Anita">
-        </div>
-        <div class="horizontal-info">
-          <h3>Ms. Anita – <span class="role-text">Social Development Professional</span></h3>
-          <p>
-            Anita is a Social Development Professional experienced in Government and Corporate Partnerships, with a strong foundation in social work (DSSW) and experience as a Public Health Trainer. She works at the intersection of program execution, stakeholder coordination, and community impact. She is also an aspirant Clinical Psychologist.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
 </section>
 
 
@@ -275,17 +267,17 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="work.html">Our Work</a>
+      <a href="our values.html">Our Values</a>
+      <a href="our team.html">Our Team</a>
       <a href="contact.html">Contact</a>
     </div>
 
     <div class="footer-col">
       <h4>Our Work</h4>
-      <a href="public-health.html">Public Health</a>
-      <a href="skill-development.html">Skill Development</a>
-      <a href="livelihood.html">Livelihood Opportunities</a>
-      <a href="sustainable-agriculture.html">Sustainable Agriculture</a>
+        <a href="partners.html">Public Health</a>
+        <a href="Skill Development.html">Skill Development</a>
+        <a href="Livelihood Opportunities.html">Livelihood & Sustainable Agriculture</a>
+        <a href="Implementation Model.html">Implementation Model</a>
     </div>
 
     <div class="footer-col">
