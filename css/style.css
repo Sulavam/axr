@@ -1906,7 +1906,92 @@ footer{
     align-items: center;
     justify-content: center;
 }
+/* ================= SKILL PILL REPAIR ================= */
 
+/* 1. Reset the Grid to be flexible */
+.dbm-skill-page .grid-row-3 {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 25px;
+    margin-top: 40px;
+}
+
+/* 2. Force the Pill Shape */
+.dbm-skill-page .card-3d-wrap {
+    flex: 0 0 290px !important; /* Forces the width to stay at 290px (The Pill Width) */
+    width: 290px !important;
+    max-width: 290px !important;
+}
+
+.dbm-skill-page .card-3d-content {
+    background: #fff;
+    height: 100%;
+    /* Extra vertical padding creates the 'Pill' height */
+    padding: 60px 30px !important; 
+    border-radius: 45px !important; /* Smooth pill corners */
+    border: 2px solid var(--border-color);
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* 3. Icon Circle Fix */
+.dbm-skill-page .icon-circle {
+    width: 100px !important;
+    height: 100px !important;
+    min-width: 100px !important; /* Prevents squashing on Android */
+    min-height: 100px !important;
+    background: var(--dbm-deep);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px !important;
+    font-size: 2rem !important;
+}
+
+/* 4. Title Wrapping */
+.dbm-skill-page .card-3d-content h3 {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    /* Forces title to wrap vertically like your screenshot */
+    max-width: 200px; 
+}
+
+/* ================= ANDROID & TABLET FIX ================= */
+
+@media (max-width: 1024px) {
+    /* On Tablets: Show 2 pills or center them */
+    .dbm-skill-page .grid-row-3 {
+        gap: 30px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* On Android Phones: Stacks them perfectly centered */
+    .dbm-skill-page .grid-row-3 {
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .dbm-skill-page .card-3d-wrap {
+        /* Prevents the pill from stretching too wide on Android */
+        flex: 0 0 280px !important; 
+        width: 280px !important;
+        margin-bottom: 20px;
+    }
+
+    .dbm-skill-page .card-3d-content {
+        padding: 50px 25px !important;
+    }
+}
 /* ================= Skill devlopment End  ================= */
 /* ================= Implementation Model ================= */
 
