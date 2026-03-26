@@ -383,22 +383,22 @@ body{
 .hero-overlay{
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, #003366 18%, transparent);
+    background: linear-gradient(to top, #003366 8%, transparent);
     z-index: 1;
 }
 
 /* CONTENT */
 .hero-content{
     position: relative;
-    padding: 52px;
-    max-width: 2300px;
+    padding: 44px;
+    max-width: 2100px;
     z-index: 2;
 }
 
 /* TEXT */
 .hero-content h1{
     color: #fff;
-    font-size: 52px;
+    font-size: 44px;
     line-height: 1.3;
     font-weight: 580;
 }
@@ -1967,29 +1967,48 @@ footer{
 
 /* ================= ANDROID & TABLET FIX ================= */
 
+/* ================= ANDROID & TABLET FIX ================= */
+
 @media (max-width: 1024px) {
-    /* On Tablets: Show 2 pills or center them */
+    /* TABLET: Adds side breathing room and centers the 2-column or 3-column rows */
+    .dbm-skill-page .container {
+        padding: 0 30px !important; /* Added side space for tablets */
+    }
+    
     .dbm-skill-page .grid-row-3 {
         gap: 30px !important;
+        justify-content: center !important;
     }
 }
 
 @media (max-width: 768px) {
-    /* On Android Phones: Stacks them perfectly centered */
+    /* ANDROID/MOBILE: Creates a centered stack with clear left/right gutters */
+    
+    .dbm-skill-page .container {
+        padding: 0 25px !important; /* This creates the "Left Right Space" on Android */
+        width: 100% !important;
+        overflow: hidden !important; /* Safety to prevent horizontal scroll */
+    }
+
     .dbm-skill-page .grid-row-3 {
         flex-direction: column !important;
         align-items: center !important;
+        gap: 25px !important;
+        width: 100% !important;
     }
 
     .dbm-skill-page .card-3d-wrap {
-        /* Prevents the pill from stretching too wide on Android */
+        /* FIXED PILL WIDTH: This keeps the 'Pill' shape and leaves space on the sides */
         flex: 0 0 280px !important; 
         width: 280px !important;
-        margin-bottom: 20px;
+        max-width: 100% !important; /* Fallback for very small screens */
+        margin: 0 auto 25px !important; /* Centers the pill and adds bottom gap */
     }
 
     .dbm-skill-page .card-3d-content {
         padding: 50px 25px !important;
+        /* Ensures the pill doesn't look 'flat' on Android */
+        box-shadow: 0 8px 25px rgba(0,0,0,0.05) !important; 
     }
 }
 /* ================= Skill devlopment End  ================= */
