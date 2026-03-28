@@ -2981,3 +2981,92 @@ display: block !important;
         margin: 0 auto;
     }
 }
+/* ================= BIG CINEMATIC VIDEO UI ================= */
+
+#livelihood-video-large {
+    padding: 60px 0 100px !important;
+    background-color: #ffffff;
+}
+
+.container-full-width {
+    width: 100%;
+    max-width: 1300px; /* Increased for a BIG look */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.video-hero-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    /* Deep shadow to make the big video 'pop' off the page */
+    box-shadow: 0 30px 80px rgba(10, 29, 55, 0.2);
+    background: #000; /* Black background while loading */
+}
+
+.video-large-frame {
+    width: 100% !important;
+    height: auto;
+    display: block;
+    aspect-ratio: 16 / 9; /* Professional Wide-screen ratio */
+    object-fit: cover;
+    border: none;
+    outline: none;
+}
+
+/* The Label Tag */
+.video-label-tag {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    background: rgba(10, 29, 55, 0.85); /* DBM Navy Glass */
+    backdrop-filter: blur(8px);
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    pointer-events: none; /* So it doesn't block clicking play */
+}
+
+.video-label-tag i {
+    color: #82C0E9; /* Light blue accent */
+}
+
+/* ================= ANDROID & TABLET FIX (THE BIG LOOK) ================= */
+
+@media (max-width: 1024px) {
+    .container-full-width {
+        padding: 0 10px !important; /* Minimal gap on tablets */
+    }
+    
+    .video-hero-wrapper {
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    #livelihood-video-large {
+        padding: 40px 0 !important;
+    }
+
+    .container-full-width {
+        padding: 0 !important; /* EDGE TO EDGE on Android Phones */
+    }
+
+    .video-hero-wrapper {
+        border-radius: 0; /* Square edges look bigger on small phones */
+    }
+
+    .video-label-tag {
+        bottom: 15px;
+        left: 15px;
+        font-size: 0.8rem;
+        padding: 8px 15px;
+    }
+}
